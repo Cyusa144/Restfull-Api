@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+/* Pattern from https://www.transparenttextures.com/ */
+html{
+    height: 100%;
+}
+body {
+    background-color: #0e0d0d;
+    color: blanchedalmond;
+}
+.container{
+    text-align: top;
+    margin: auto;
+    max-width: 1100px;
+   
+}
+
+header {
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    height: 10%;
+    
+}
+
+.logo {
+    width: 30%;
+    text-align: center;
+}
+.logo span {
+    font-size: 25px;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu {
+    width: 40%;
+   
+    font-size: 20px;
+    text-align: end;
+    margin-left: 320px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover {
+    font-weight: bolder;
+}
+.logo span{
+    
+    
+    margin-left: -180px;
+}
+
+.active {
+    font-weight: bolder;
+}
+.introduction{
+    flex-direction: column;
+    margin-top: 300px;
+    justify-content: center;
+    margin-left: 200px;
+   
+}
+
+.bio-container{
+    
+    margin-top: 50px; 
+    height: 300px;
+    background-image: url("../photos/mee.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 75px;
+   
+}
+
+.develop{
+    color: coral;
+    font-weight: bold;
+}
+.bio {
+    background: rgba(0, 0, 0, 0.473);
+}
+.bio span{
+    font-weight: bold;
+    margin-top: 500px;
+}
+.social-media{
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 30px;
+}
+.social-media span {
+    margin-left: 5px;
+}
+hr.line {
+    height: 6px;
+    border: none;
+    background: #fa4d4d;
+    text-align: start;
+    margin-left: 0px;
+    
+    
+}
+.bio{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 100px;
+}
+
+
+hr{
+    text-align: center; 
+    margin-left: 350px; 
+    margin-top: 30px;
+}
+.signin a {
+    text-decoration: none;
+    color: white;
+    background: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.signin a:hover {
+    color: black;
+    background: white;
+    border: 1px solid black;
+}
+@media (min-width: 600px) {
+    p {
+        font-size: 1.2px;
+    }
+
+    }
+@media (max-width: 800px) {
+    p {
+        font-size: 1.2px;
+        line-height: 1.2px;
+    }
+    
+    .logo {
+        width: 100%;
+    }
+}
