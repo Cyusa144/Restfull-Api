@@ -9,93 +9,117 @@ body {
     color: blanchedalmond;
 }
 
-.header {
-    width: 100%;
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-top: 30px;
+    min-height: 70px;
+}
+
+header a:hover{
+    font-weight: 700;
+}
+
+header ul{
+    margin: 0;
+    padding: 0;
+}
+
+header li{
     float: left;
-    padding-top: 0px;
-    line-height: 200px;
+    display: inline;
+    padding: 0 20px 0 20px;
 }
 
-.logo {
-    width: 30%;
-    float:left;
-    text-align: center;
-}
-.logo span {
-    font-size: 25px;
-    line-height: 1.5;
-    display: inline-block;
-    vertical-align: middle;
+header #branding {
+    float: left;
+    margin-top: 10px;
 }
 
-.menu {
-    width: 40%;
-    float:left;
-    font-size: 20px;
-    text-align: center;
+header #branding h1{
+    margin: 0;
 }
 
-.menu a {
+header nav{
+    float: right;
+    margin-top: 20px;
+}
+
+.signin-button{
     text-decoration: none;
     color: white;
-}
-
-.menu a:hover {
-    font-weight: bolder;
-}
-
-
-.active {
-    font-weight: bolder;
-}
-.introduction{
-    flex-direction: column;
-    margin-top: 300px;
-    justify-content: center;
-    margin-left: 200px;
-   
-}
-
-
-.social-media{
-    margin-left: 450px;
-    margin-top: -60px;
-    justify-content:space-around;
-}
-.signin {
-    width: 30%;
-    float:left;
-    text-align: center;
-}
-
-.signin a {
-    text-decoration: none;
-    color: white;
-    background: white
+    background: #05386b;
     font-size: 20px;
     padding: 10px;
     border-radius: 5px;
+
 }
 
-.signin a:hover {
+.signin-button:hover{
+    background: #ffffff;
+    color: black;
+}
+.signin-form{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 10%;
+    
+}
+input[type=text],input[type=password], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  input[type=submit] {
+    background-color: #05386b;
     color: white;
-    background: white;
-    border: 1px solid black;
-}
-.tones{
-    text-align: center;
-    justify-content: center;
-    margin-left: 180px;
-}
-@media (min-width: 600px) {
-    p {
-        font-size: 1.2px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: rgba(255, 255, 255, .5);
+    color: black;
+    font-weight: 700;
+    border: black 1px solid;
+  }
+
+  .containers{
+    color: white;
+    margin-top: 15px;
+    width: 80%;
+    margin: 15px 0 0 41px
+  }
+
+ 
+  @media(max-width: 768px){
+    header #branding,
+    header nav,
+    header nav li{
+        float: none;
+        text-align: center;
+        width: 100%;
     }
 
+    .signin-form{
+        display: block;
     }
-@media (max-width: 800px) {
-    p {
-        font-size: 1.2px;
-        line-height: 1.2px;
-    }
+
+    
 }

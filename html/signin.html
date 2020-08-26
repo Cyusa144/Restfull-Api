@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>signin</title>
-    <link rel="stylesheet" href="../css/signin.css>
+    <title>Sign in</title>
+    <link rel="stylesheet" href="../css/signin.css">
 </head>
+
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <div class="header">
             <div class="logo">
-               
+
                 <span>Cyusa I Jacob</span>
             </div>
             <div class="menu">
@@ -26,12 +28,50 @@
                 <a href="signin.html" class="signin-button">SIGN IN</a>
             </div>
         </div>
-    <div class="tones">
-      <h4 class="toti">Email or username</h4>  
-      <input class="sasa" type="email">
-      <h4 class="toti">Password</h4>
-      <input class="toti" type="password">
+        <div class="tones">
+            <h4 class="toti">Email or username</h4>
+            <input class="sasa" type="email">
+            <h4 class="toti">Password</h4>
+            <input class="toti" type="password">
+        </div> -->
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Cyusa I Jacob</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="menu-item active">HOME</a></li>
+                    <li><a href="about.html" class="menu-item">ABOUT</a></li>
+                    <li><a href="blog.html" class="menu-item">BLOG</a></li>
+                    <li><a href="contact.html" class="menu-item">CONTACT</a></li>
+                    <li><a href="signin.html" class="signin-button">SIGN IN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="signin-form">
+        <form>
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <input type="submit" value="Login">
+
+            </div>
+
+            <div class="containers" "> <br>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label> |
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+
     </div>
-    
 </body>
+
 </html>
