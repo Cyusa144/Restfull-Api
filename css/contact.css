@@ -83,29 +83,99 @@ input[type=text],input[type=password], textarea {
     cursor: pointer;
   }
   
-  input[type=submit]:hover {
+  input[type=button]:hover {
     background-color:white;
     color: black;
     border: 1px solid black;
   }
   
 .contact-form {
-    width: 30%;
-    margin-left: 350px;
+    width: 50%;
+    margin-left: 20%;
     margin-top: 140px;
+    display: flex;
+}
+.icons{
+   padding-left: 170px;
+   text-align: end;
+   margin-top: 90px;
+}
+.icons i {
+    font-size: 25px;
+    padding-right: 50px;
+}
+.icons p{
+    font-size: 25px;
+}
+label{
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+}
+
+#toggle{
+    display: none;
 }
 @media(max-width: 768px){
-    header #branding,
+    body{
+        margin-left: 8%;
+        margin-right: 5%;
+    }
+    
     header nav,
     header nav li{
         float: none;
         text-align: center;
         width: 100%;
+        display: none;
     }
 
     .signin-form{
         display: block;
     }
 
-    
+    h1{
+        display: none;
+    }
+    label{
+        display: block;
+        cursor: pointer;
+        text-align:end;
+        margin-top: -30px;
+        margin-right: -3px;
+    }
+    .label-container{
+       text-align: initial;
+    }
+    ul {
+        text-align: center;
+        width: 100%;
+        margin: 0 30px 0 0;
+    }
+
+    ul a {
+        display: block;
+        border-bottom: 1px #05386b solid;
+        margin: 0;
+        clear: right;
+        text-decoration: none;
+        margin: 0 10px;
+        line-height: 40px;
+    }
+
+    #toggle:checked + ul{
+        display: block;
+    }
+    .contact-form{
+        width: 100%;
+    }
+    .icons{
+        padding-left: 34px;
+       text-align: start;
+       margin-top: 90px;
+    }
+   form{
+       width: 40%;
+   }
 }

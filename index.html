@@ -9,12 +9,20 @@
 <body>
     <div class="container">
         <header>
-            <div class="container">
+            
                 <div id="branding">
                     <h1>Cyusa I Jacob</h1>
                 </div>
-                <nav>
+                <div>
+                    <label for="toggle" class="label" onclick="showNavigation()">&#9776;</label>
+                        <input type="checkbox" id="toggle">
+                </div>
+                
+                <nav class="navigation" id="navigation">
+                
+                    
                     <ul>
+                    
                         <li><a href="./index.html" class="menu-item active">HOME</a></li>
                         <li><a href="./html/about.html" class="menu-item">ABOUT</a></li>
                         <li><a href="./html/blog.html" class="menu-item">BLOG</a></li>
@@ -22,19 +30,17 @@
                         <li><a href="./html/signin.html" class="signin-button">SIGN IN</a></li>
                     </ul>
                 </nav>
-            </div>
-        </header>
+       </header>
          <section class="bio-container">
             
-             <p class="bio"><span>Hi</span>I am Cyusa I.Jacob, I am a <span class="develop">Developer</span> currently based in Rwanda</p>
+             <p class="bio"> <span>Hi </span> I am Cyusa I.Jacob, </br>I am a <span class="develop">JavaScript Developer</span> </p>
          </section>
-         <section>
-             <hr class="line">     
-        </section>
+        
     
     </div>
 
     <footer class="social-media">
+        <hr class="line">  
         <span class="icon">
             <i class="fa fa-facebook"></i>
         </span>
@@ -51,15 +57,8 @@
             <i class="fa fa-youtube"></i>
         </span>
      </footer>
-    
+     <script src="script/app.js">
         
-       
-       
-       
- 
-         
-            
-        
-   
+     </script>
 </body>
 </html>

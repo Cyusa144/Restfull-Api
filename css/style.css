@@ -16,8 +16,11 @@ body {
     width: 90%;
     margin: auto;
     overflow: hidden;
+    height: 100vh;
 }
-
+header{
+    margin-bottom: 100px;
+}
 header a{
     color: #ffffff;
     text-decoration: none;
@@ -72,26 +75,39 @@ header nav{
 }
 .bio-container{
     
-    margin-top: 50px; 
-    height: 300px;
+    
+    height: 90%;
     background-image: url("../photos/mee.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 75px;
+    padding-top: 230px;
+    
+   
+    
    
 }
 
 .develop{
-    color: coral;
+    color:coral;
     font-weight: bold;
+    height: 10px;
+    border-bottom: 1px black solid;
+   
 }
 .bio {
-    background: rgba(0, 0, 0, 0.473);
-    margin-top: 625px;
+    
+   
+    margin-left: 15px;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    
+
+    
 }
 .bio span{
     font-weight: bold;
-    margin-top: 500px;
+   
 }
 .social-media{
     width: 100%;
@@ -111,11 +127,7 @@ hr.line {
     
     
 }
-.bio{
-    text-align: center;
-    font-size: 30px;
-    margin-top: 100px;
-}
+
 
 
 hr{
@@ -137,19 +149,70 @@ hr{
     background: white;
     border: 1px solid black;
 }
+label{
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+}
+#toggle{
+    display: none;
+    
+}
 @media(max-width: 768px){
-    header #branding,
+    
     header nav,
     header nav li{
         float: none;
         text-align: center;
         width: 100%;
+        display: none;
+        
     }
+    #branding{
+        text-align: center;
+    }
+    .navigation{
+        background: rgba(0, 0, 0, 0.5);
+ 
+    }
+    h1{
+        display: none;
+    }
+    label{
+        display: block;
+        cursor: pointer;
+        text-align: right;
+        margin-top: -30px;
+        margin-right: -3px;
 
-    .signin-form{
+    }
+    ul{
+        text-align: center;
+        width: 100%;
+        margin: 0 30px 0 0;
+        
+    }
+    ul a{
+        
+        border-bottom: 1px #05386b solid;
+        margin: 0;
+        clear: right;
+        text-decoration: none;
+        margin: 0 10px;
+        line-height: 60px;
+    }
+    #toggle: checked + ul {
+        display: block;
+    }  
+    .bio-container{
+        float: none;
+        text-align: center;
+        width: 100%;  
+    }
+    .menu-item{
         display: block;
     }
-
     
 }
 

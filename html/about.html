@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/about.css">
 </head>
 
@@ -14,9 +15,14 @@
             <div id="branding">
                 <h1>Cyusa I Jacob</h1>
             </div>
-            <nav>
+            <div>
+                <label for="toggle" class="label" onclick="showNavigation()">&#9776;</label>
+                    <input type="checkbox" id="toggle">
+            </div>
+            <nav class="navigation" id="navigation">
                 <ul>
-                    <li><a href="index.html" class="menu-item active">HOME</a></li>
+        
+                    <li><a href="../index.html" class="menu-item active">HOME</a></li>
                     <li><a href="about.html" class="menu-item">ABOUT</a></li>
                     <li><a href="blog.html" class="menu-item">BLOG</a></li>
                     <li><a href="contact.html" class="menu-item">CONTACT</a></li>
@@ -26,50 +32,88 @@
         </div>
     </header>
     <section class="about-section">
-        <h2>About</h2>
+        <div>
+            <h2 class="title">About</h2>
+        </div>
         <p class="about-paragraph">I care deeply about creating world-class, useful, and beautiful products that help people and make a difference. I can be as involved in your project as you need me to be; from the seed of the idea, to sketches, creative direction, design, copywriting, system design, and even the front-end and WordPress build.</p>
     </section>
     <section>
         <div>
-            <h2 class="title-skills">Skills</h2>
+            <h2 class="title">Skills</h2>
         </div>
-        <div class="porfolio">
+        <div class="skills-container">
             <div class="portolio-item">
                 <img class="image" src="../photos/html.png" alt="">
-                <h3>Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</h3>
+                
             </div>
             <div class="portolio-item">
                 <img class="image" src="../photos/css.jpg" alt="">
-                <h3>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</h3>
+           
             </div>
             <div class="portolio-item">
                 <img class="image"src="../photos/js.png" alt="">
-                <h3>JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.</h3>
+                
+            </div>
+            <div class="portolio-item">
+                <img class="image"src="../photos/js.png" alt="">
+                
+            </div>
+            <div class="portolio-item">
+                <img class="image" src="../photos/html.png" alt="">
+                
             </div>
     </section>
-        
+   
     <section>
-    
-        <div class="porfolio">
-            <div>
-                <h2 class="title-project">Projects</h2>
+        <div>
+            <h2 class="title">Projects</h2>
+        </div>  
+        
+        <div class="project-container">
+          
+            <div class="portfolio-item">
+                <img class="image" src="../photos/stu.png" alt="">
+                <p class="portofolio-paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, eaque!</p>
             </div>
-            <div class="portolio-item">
-                <img src="../photos/stu.png" alt="">
-                <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, eaque!</h3>
+            <div class="portfolio-item">
+                <img class="image" src="../photos/stu.png" alt="">
+                <p  class="portofolio-paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, eaque!</p>
             </div>
-            <div class="portolio-item">
-                <img src="../photos/stu.png" alt="">
-                <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, eaque!</h3>
+            <div class="portfolio-item">
+                <img class="image" src="../photos/stu.png" alt="">
+                <p class="portofolio-paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, eaque!</p>
             </div>
-            <div class="portolio-item">
-                <img src="../photos/stu.png" alt="">
-                <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, eaque!</h3>
+            <div class="portfolio-item">
+                <img class="image" src="../photos/stu.png" alt="">
+                <p class="portofolio-paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, eaque!</p>
             </div>
+           
         </div>
     </section>
-    
-
+    <footer class="social-media">
+        <hr class="line">  
+        <span class="icon">
+            <i class="fa fa-facebook"></i>
+        </span>
+        <span class="icon">
+            <i class="fa fa-instagram"></i>
+        </span>
+        <span class="icon">
+            <i class="fa fa-linkedin"></i>
+        </span>
+        <span class="icon">
+            <i class="fa fa-twitter"></i>
+        </span>
+        <span class="icon">
+            <i class="fa fa-youtube"></i>
+        </span>
+     </footer>
+     <script src="script/app.js">
+        
+     </script>
+    <script src="../script/app.js">
+        
+    </script>
 </body>
 
 </html>

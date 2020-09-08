@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact</title>
     <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -14,9 +15,16 @@
             <div id="branding">
                 <h1>Cyusa I Jacob</h1>
             </div>
-            <nav>
+            <div>
+                <label for="toggle" class="label" onclick="showNavigation()">&#9776;</label>
+                    <input type="checkbox" id="toggle">
+            </div>
+            
+            <nav class="navigation" id="navigation">
+            
                 <ul>
-                    <li><a href="index.html" class="menu-item active">HOME</a></li>
+                    
+                    <li><a href="../index.html" class="menu-item active">HOME</a></li>
                     <li><a href="about.html" class="menu-item">ABOUT</a></li>
                     <li><a href="blog.html" class="menu-item">BLOG</a></li>
                     <li><a href="contact.html" class="menu-item">CONTACT</a></li>
@@ -27,15 +35,38 @@
     </header>
     <div class="contact-form">
         <form>
-            <label for="names">Names</label>
+            <label class="label-container" for="names">Names</label>
             <input type="text" id="names" name="names" placeholder="Names..">
+
+            <label class="label-container" for="names">Email</label>
+            <input type="text" id="email" name="email" placeholder="email..">
         
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Write something.." style="height:150px"></textarea>
+            <label class="label-container" for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write something.." style="height:100px"></textarea>
         
             <input type="submit" value="Submit">
+
+           
           </form>
+          <div class="icons">
+            <div>
+                <i class="fa fa-twitter"> </i>
+                <p>Cyusa03</p>
+            </div>
+            <div>
+                <i class="fa fa-instagram"></i>
+                <p>Cyusa03</p>
+            </div>
+            <div>
+                <i class="fa fa-facebook"></i>
+                <p>Cyusa03</p>
+            </div>
+        </div>
        </div>
+        
+       <script src="../script/app.js">
+        
+       </script>
 </body>
 
 </html>

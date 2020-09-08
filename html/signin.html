@@ -6,42 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in</title>
     <link rel="stylesheet" href="../css/signin.css">
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-storage.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
 </head>
 
 <body>
-    <!-- <div class="container">
-        <div class="header">
-            <div class="logo">
 
-                <span>Cyusa I Jacob</span>
-            </div>
-            <div class="menu">
-                <a href="index.html" class="menu-item active">HOME</a>
-                <span class="menu-dot">·</span>
-                <a href="about.html" class="menu-item">ABOUT</a>
-                <span class="menu-dot">·</span>
-                <a href="blog.html" class="menu-item">BLOG</a>
-                <span class="menu-dot">·</span>
-                <a href="contact.html" class="menu-item">CONTACT</a>
-            </div>
-            <div class="signin">
-                <a href="signin.html" class="signin-button">SIGN IN</a>
-            </div>
-        </div>
-        <div class="tones">
-            <h4 class="toti">Email or username</h4>
-            <input class="sasa" type="email">
-            <h4 class="toti">Password</h4>
-            <input class="toti" type="password">
-        </div> -->
     <header>
         <div class="container">
             <div id="branding">
                 <h1>Cyusa I Jacob</h1>
             </div>
-            <nav>
+            <div>
+                <label for="toggle" class="label" onclick="showNavigation()">&#9776;</label>
+                    <input type="checkbox" id="toggle">
+            </div>
+            
+            <nav class="navigation" id="navigation">
+            
+           
                 <ul>
-                    <li><a href="index.html" class="menu-item active">HOME</a></li>
+                    
+                    <li><a href="../index.html" class="menu-item active">HOME</a></li>
                     <li><a href="about.html" class="menu-item">ABOUT</a></li>
                     <li><a href="blog.html" class="menu-item">BLOG</a></li>
                     <li><a href="contact.html" class="menu-item">CONTACT</a></li>
@@ -53,25 +42,35 @@
     <div class="signin-form">
         <form>
             <div class="container">
-                <label for="uname"><b>Username</b></label>
+                <label class="label-container" for="uname"><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" name="uname" required>
 
-                <label for="psw"><b>Password</b></label>
+                <label class="label-container" for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" required>
 
                 <input type="submit" value="Login">
 
             </div>
 
-            <div class="containers" "> <br>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label> |
-                <span class="psw">Forgot <a href="#">password?</a></span>
+            <div class="containers" >
+               
             </div>
         </form>
 
     </div>
+    
+   
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/7.19.0/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    
+    <script src="/__/firebase/init.js"></script>
+    <script src="../script/app.js">
+        
+    </script>
+
 </body>
 
 </html>
