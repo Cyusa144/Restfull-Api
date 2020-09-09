@@ -98,6 +98,7 @@ body {
     margin-left: 300px;
     height: 100%;
     
+    
     overflow-y: scroll;
 }
 .admin-content .page-title {
@@ -151,7 +152,9 @@ input[type=text],input[type=password], textarea {
     color: black;
     border: 1px solid black;
   }
-  
+.button-group{
+    margin-top:10%;
+} 
 
 .btn-big{
     border: #05386b, solid 2px;
@@ -162,7 +165,50 @@ input[type=text],input[type=password], textarea {
     background-color: #05386b;
     
   }
+ 
+}
+.toggle-button{
+    position: absolute;
+    top:.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
   @media only screen and (max-width:750px) {
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links li {
+        text-align: center;
+    } 
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
       header ul {
           width: 100%;
           background: #004044;
