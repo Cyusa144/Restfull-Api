@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="../css/signin.css">
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-storage.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="brand-title">Cyusa I Jacob</div>
+         <a href="#" class="toggle-button">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+         </a> 
+         <div class="navbar-links">
+            <ul>
+                    
+                <li><a href="../index.html" class="menu-item active">HOME</a></li>
+                <li><a href="./about.html" class="menu-item">ABOUT</a></li>
+                <li><a href="./blog.html" class="menu-item">BLOG</a></li>
+                <li><a href="./contact.html" class="menu-item">CONTACT</a></li>
+                <li><a href="./signin.html" class="signin-button">SIGN IN</a></li>
+            </ul>
+         </div>
+    </nav>
+    <div class="signin-form">
+        <form>
+            <div class="container">
+                <label class="label-container" for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label class="label-container" for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <input type="submit" value="Login">
+
+            </div>
+
+            <div class="containers" >
+               
+            </div>
+        </form>
+
+    </div>
+    <footer class="social-media">
+        <hr class="line">  
+        <span class="icon">
+            <i class="fa fa-facebook"></i>
+        </span>
+        <span class="icon">
+            <i class="fa fa-instagram"></i>
+        </span>
+        <span class="icon">
+            <i class="fa fa-linkedin"></i>
+        </span>
+        <span class="icon">
+            <i class="fa fa-twitter"></i>
+        </span>
+        <span class="icon">
+            <i class="fa fa-youtube"></i>
+        </span>
+     </footer>
+   
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/7.19.0/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    
+    <script src="/__/firebase/init.js"></script>
+    <script src="../script/app.js">
+        
+    </script>
+
+</body>
+
+</html>

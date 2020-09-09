@@ -1,0 +1,645 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+/* Pattern from https://www.transparenttextures.com/ */
+body {
+    background-color: #0e0d0d;
+    color: blanchedalmond;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-top: 30px;
+    min-height: 70px;
+}
+
+header a:hover{
+    font-weight: 700;
+}
+
+header ul{
+    margin: 0;
+    padding: 0;
+}
+
+header li{
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+    margin-top: 10px;
+}
+
+header #branding h1{
+    margin: 0;
+}
+
+header nav{
+    float: right;
+    margin-top: 20px;
+}
+
+.signin-button{
+    text-decoration: none;
+    color: white;
+    background: #05386b;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+.skills-container {
+    display: grid;
+    grid-column-gap: 20px;
+    row-gap: 15px;
+    grid-template-columns: repeat(4,1fr);
+    padding: 10px;
+
+}
+.portofolio-paragraph{
+    margin-left: 70px;
+    width: 180px;
+}
+.portolio-item {
+    
+    
+    font-size: 20px;
+    text-align: center;
+}
+.project-container{
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-columns:repeat(4,1fr) ;
+    padding: 10px;  
+}
+.portfolio-item{
+    font-size: 20px;
+    text-align: center;
+}
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+.about-paragraph{
+    font-size: 20px;
+    text-indent: 50px;
+    text-align: left;
+    letter-spacing: 3px;
+    width: 50%;
+    margin-left: 350px;
+}
+.about-section{
+    text-align: center;
+    /* width: 50%; */
+}
+.title{
+    text-align: center;
+}
+.image{
+    width: 180px;
+    height: 180px;
+}
+h2{
+    padding: 100px;
+}
+label{
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+}
+
+#toggle{
+    display: none;
+}
+.social-media{
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 30px;
+}
+.social-media span {
+    margin-left: 5px;
+}
+hr.line {
+    height: 6px;
+    border: none;
+    background: #fa4d4d;
+    text-align: start;
+    margin-left: 0px;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+/* Pattern from https://www.transparenttextures.com/ */
+html{
+    height: 100%;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #0e0d0d;
+    color: blanchedalmond;
+}
+/* Change */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+.brand-title{
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links li{
+    list-style: none;
+}
+.navbar-links li a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+.navbar-links li:hover{
+    background-color: #555;
+
+}
+.toggle-button{
+    position: absolute;
+    top:.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    height: 100vh;
+}
+header{
+    margin-bottom: 100px;
+}
+header a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-top: 30px;
+    min-height: 70px;
+}
+
+header a:hover{
+    font-weight: 700;
+}
+
+header ul{
+    margin: 0;
+    padding: 0;
+}
+
+header li{
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+    margin-top: 10px;
+}
+
+header #branding h1{
+    margin: 0;
+}
+
+header nav{
+    float: right;
+    margin-top: 20px;
+}
+
+.signin-button{
+    text-decoration: none;
+    color: white;
+    background: #05386b;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.signin-button:hover{
+    background: #ffffff;
+    color: black;
+}
+.bio-container{
+    
+    
+    height: 90%;
+    background-image: url("../photos/mee.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 230px;
+    
+   
+    
+   
+}
+
+.develop{
+    color:coral;
+    font-weight: bold;
+    height: 10px;
+    border-bottom: 1px black solid;
+   
+}
+.bio {
+    
+   
+    margin-left: 15px;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    
+
+    
+}
+.bio span{
+    font-weight: bold;
+   
+}
+.social-media{
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 30px;
+}
+.social-media span {
+    margin-left: 5px;
+}
+hr.line {
+    height: 6px;
+    border: none;
+    background: #fa4d4d;
+    text-align: start;
+    margin-left: 0px;
+    
+    
+}
+
+
+
+hr{
+    text-align: center; 
+    margin-left: 350px; 
+    margin-top: 30px;
+}
+.signin a {
+    text-decoration: none;
+    color: white;
+    background: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.signin a:hover {
+    color: black;
+    background: white;
+    border: 1px solid black;
+}
+
+}
+#toggle{
+    display: none;
+    
+}
+@media(max-width: 768px){
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links li {
+        text-align: center;
+    } 
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+   
+    body {
+        margin-left: 8%;
+        margin-right: 5%;
+    }
+    
+    header nav,
+    header nav li{
+        float: none;
+        text-align: center;
+        width: 100%;
+        display: none;
+        
+    }
+    .navigation{
+        background: rgba(0, 0, 0, 0.5);
+ 
+    }
+    h1{
+        display: none;
+    }
+    label{
+        display: block;
+        cursor: pointer;
+        text-align:end;
+        margin-top: -30px;
+        margin-right: -19px;
+
+    }
+    ul{
+        text-align: center;
+        width: 100%;
+        margin: 0 30px 0 0;
+        
+    }
+    ul a{
+        
+        border-bottom: 1px #05386b solid;
+        margin: 0;
+        clear: right;
+        text-decoration: none;
+        margin: 0 10px;
+        line-height: 60px;
+    }
+    #toggle: checked + ul {
+        display: block;
+    }  
+    
+    .menu-item{
+        display: block;
+    }
+    .skills-container,.project-container{
+        grid-template-columns:repeat(1,1fr);
+        text-align: center;
+        width: auto;
+    }
+    .about-paragraph{
+        margin-left: -3px;
+        float: none;
+        text-align: center;
+        width: 100%;  
+    }
+    .about-section{
+        float: none;
+        text-align: center;
+        width: 100%;    
+    }
+}
+@media(max-width: 768px){
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links li {
+        text-align: center;
+    } 
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+   
+    body {
+        margin-left: 8%;
+        margin-right: 5%;
+    }
+    
+    header nav,
+    header nav li{
+        float: none;
+        text-align: center;
+        width: 100%;
+        display: none;
+        
+    }
+    .navigation{
+        background: rgba(0, 0, 0, 0.5);
+ 
+    }
+    h1{
+        display: none;
+    }
+    label{
+        display: block;
+        cursor: pointer;
+        text-align:end;
+        margin-top: -30px;
+        margin-right: -19px;
+
+    }
+    ul{
+        text-align: center;
+        width: 100%;
+        margin: 0 30px 0 0;
+        
+    }
+    ul a{
+        
+        border-bottom: 1px #05386b solid;
+        margin: 0;
+        clear: right;
+        text-decoration: none;
+        margin: 0 10px;
+        line-height: 60px;
+    }
+    #toggle: checked + ul {
+        display: block;
+    }  
+    
+    .menu-item{
+        display: block;
+    }
+    .skills-container,.project-container{
+        grid-template-columns:repeat(1,1fr);
+        text-align: center;
+        width: auto;
+    }
+    .about-paragraph{
+        margin-left: -3px;
+        float: none;
+        text-align: center;
+        width: 100%;  
+    }
+    .about-section{
+        float: none;
+        text-align: center;
+        width: 100%;    
+    }
+}
+
+@media(max-width: 1024px){
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links li {
+        text-align: center;
+    } 
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+   
+    body {
+        margin-left: 8%;
+        margin-right: 5%;
+    }
+    
+    header nav,
+    header nav li{
+        float: none;
+        text-align: center;
+        width: 100%;
+        display: none;
+        
+    }
+    .navigation{
+        background: rgba(0, 0, 0, 0.5);
+ 
+    }
+    h1{
+        display: none;
+    }
+    label{
+        display: block;
+        cursor: pointer;
+        text-align:end;
+        margin-top: -30px;
+        margin-right: -19px;
+
+    }
+    ul{
+        text-align: center;
+        width: 100%;
+        margin: 0 30px 0 0;
+        
+    }
+    ul a{
+        
+        border-bottom: 1px #05386b solid;
+        margin: 0;
+        clear: right;
+        text-decoration: none;
+        margin: 0 10px;
+        line-height: 60px;
+    }
+    #toggle: checked + ul {
+        display: block;
+    }  
+    
+    .menu-item{
+        display: block;
+    }
+    .skills-container,.project-container{
+        grid-template-columns:repeat(1,1fr);
+        text-align: center;
+        width: auto;
+    }
+    .about-paragraph{
+        margin-left: -3px;
+        float: none;
+        text-align: center;
+        width: 100%;  
+    }
+    .about-section{
+        float: none;
+        text-align: center;
+        width: 100%;    
+    }
+}
+
+
