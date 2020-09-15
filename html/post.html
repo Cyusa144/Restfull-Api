@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            
+                <div class="navbar" id="branding">
+                    <h1>Cyusa I Jacob</h1>
+                    <a href="#" class="toggle-button">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </a> 
+                </div>
+                
+        </header>
+
+       <div class="wrapper">
+           <div class="sidebar">
+             <h2>Dashboard</h2>
+             <ul>
+                 <li><a href="../html/create-users.html"><i class="fa fa-user">&nbsp;user</i></a></li>
+                
+                 <li><a href="../html/post.html"><i class="fa fa-hourglass">&nbsp;posts</i></a></li>
+                 <li><a href="https://www.google.com/?q=google+home" class="logout">log out </output></a></li>
+             </ul>
+           </div>
+       </div>
+     <div class="admin-content">
+      
+      <div class="content">
+          <h2 class="page-title">manage article</h2>
+          <h1>topics</h1 style>
+            <div class="content">
+                <form id="add-article-form" action="submit">
+                    <input type="number" name="number" placeholder="1" style="width: 50px;">
+                    <input type="text" name="title" placeholder="title" style="width: 150px;">
+                    <input type="text" name="Author" placeholder="author" style="width: 150px;">
+                    <input type="text" name="action" placeholder="action" style="width: 150px;">
+                    <button type="submit">add article</button><br>
+                </form>
+                <ul id="article-list">
+                    <li class="border">
+                        <span>1</span>
+                        <span >Bonnie and Clyde</span>
+                        <span>Alexis</span>
+                        <span><a href="#" class="edit">edit</a>
+                            <span><a href="#" class="delete">delete</a>
+                    </li>
+                    <li class="border">
+                        <span>2</span>
+                        <span>The Beatles</span>
+                        <span>Gigi</span>
+                        <span><a href="#" class="edit">edit</a>
+                            <span><a href="#" class="delete">delete</a>
+                    </li>
+        
+                </ul>
+            </div>
+        
+        
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-storage.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+            <script>
+                // Your web app's Firebase configuration
+                var firebaseConfig = {
+                    apiKey: "AIzaSyA3pn7TTuOUoGPk3pliVUgbH5-xIysHHj8",
+                    authDomain: "cyusa-project-9570e.firebaseapp.com",
+                    databaseURL: "https://cyusa-project-9570e.firebaseio.com",
+                    projectId: "cyusa-project-9570e",
+                    storageBucket: "cyusa-project-9570e.appspot.com",
+                    messagingSenderId: "1085067100368",
+                    appId: "1:1085067100368:web:9496966a0e62e503f91ed5",
+                    measurementId: "G-3X352JZ9HR"
+                };
+        
+        
+            </script>
+      </div>
+    </div>
+    <script src="../script/admin.js">
+        
+     </script>
+</body>
+</html>

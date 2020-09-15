@@ -7,8 +7,15 @@
     font-family: 'Roboto', sans-serif;
 }
 /* Pattern from https://www.transparenttextures.com/ */
+
+/* ul{
+    border-left: 5px solid #ddd;
+    padding: 20px;
+    margin: 20px 10px;
+} */
+
 html{
-    height: 100%;
+   
 }
 header{
     background: black;
@@ -22,7 +29,7 @@ header ul  {
     
 }
 header ul li {
-    float: left;
+   
     position: relative;
 }
 header ul li ul {
@@ -33,7 +40,7 @@ header ul li ul {
 }
 header ul li a {
     display: block;
-    padding: 21px;
+    padding: 10px;
     font-size: 1.1em;
     text-decoration: none;
     margin-top: -46px;
@@ -44,7 +51,7 @@ header ul li a:hover{
     transition: 0.5s;
 }
 header .menu-toggle {
-    display: none;
+    display: flex;
 }
 
 .nav{
@@ -57,9 +64,6 @@ header .menu-toggle {
 }
 body {
     
-    
-}
-
 }
 .wrapper {
     display: flex;
@@ -79,7 +83,7 @@ body {
     border-bottom: 1px solid #004044;
 }
 .wrapper .sidebar ul li a:hover{
-    background: solid #004044;
+    background: solid #555;
 }
 .wrapper .sidebar {
     position: fixed;
@@ -96,14 +100,33 @@ body {
 }
 .admin-content {
     margin-left: 300px;
-    height: 100%;
+    
+    overflow: hidden;
     
     
     overflow-y: scroll;
 }
 .admin-content .page-title {
     text-align: center;
-    padding: 40px 100px 100px;
+    padding: 20px 100px 20px;
+    
+}
+.content{
+    
+}
+.border{
+    display: grid;
+    grid-column-gap: 5px;
+    row-gap: 5px;
+    grid-template-columns: repeat(7,1fr);
+    padding: 5px;
+}
+.content form{
+    display: grid;
+    grid-column-gap: 5px;
+    row-gap: 5px;
+    grid-template-columns: repeat(7,1fr);
+    padding: 5px;
 }
 table{
     width: 100%;
@@ -129,18 +152,18 @@ form div{
 }
 input[type=text],input[type=password], textarea {
     width: 100%;
-    padding: 12px;
+    padding: 5px;
     border: 1px solid lightgray;
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 6px;
-    margin-bottom: 16px;
+    margin-bottom: 5px;
     resize: vertical;
   }
   
   input[type=button] {
     background-color:#05386b;
-    color:;
+    color:white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -153,7 +176,7 @@ input[type=text],input[type=password], textarea {
     border: 1px solid black;
   }
 .button-group{
-    margin-top:10%;
+    margin-top:10px;
 } 
 
 .btn-big{
@@ -164,8 +187,6 @@ input[type=text],input[type=password], textarea {
     color: white;
     background-color: #05386b;
     
-  }
- 
 }
 .toggle-button{
     position: absolute;
@@ -187,7 +208,7 @@ input[type=text],input[type=password], textarea {
     .toggle-button{
         display: flex;
     }
-    .navbar-links{
+    .wrapper{
         display: none;
         width: 100%;
     }
@@ -196,17 +217,17 @@ input[type=text],input[type=password], textarea {
         align-items: flex-start;
 
     }
-    .navbar-links ul {
+    .wrapper ul {
         width: 100%;
         flex-direction: column;
     }
-    .navbar-links li {
+    .wrapper li {
         text-align: center;
     } 
-    .navbar-links li a {
+    .wrapper li a {
         padding: .5rem 1rem;
     }
-    .navbar-links.active {
+    .wrapper.active {
         display: flex;
     }
       header ul {
@@ -235,6 +256,12 @@ input[type=text],input[type=password], textarea {
       header .menu-toggle {
         display: block;
     }
+    .admin-content{
+        width: auto;
+        margin-left: auto;
+        padding: 20px 20px 20px;
+    }
   
     }
+
 
