@@ -51,16 +51,24 @@ firebase.initializeApp(firebaseConfig);
 
   function renderComments(doc){
      const commentsContainer = document.querySelector('.comments-container')
+     const singleComment = document.createElement('div')
+     singleComment.classList.add("single-comment");
      const commentImage = document.createElement('img')
      commentImage.setAttribute('src','../photos/user.png')
+     commentImage.classList.add("img-circle");
+     const namesDiv = document.createElement('div')
+     namesDiv.classList.add("name-div");
      let commentName = document.createElement('h3')
      commentName.textContent=doc.data().name
      let comment = document.createElement('p')
      comment.textContent= doc.data().comment
 
-     commentsContainer.appendChild(commentImage)
-     commentsContainer.appendChild(commentName)
-     commentsContainer.appendChild(comment)
+     namesDiv.appendChild(commentName)
+     namesDiv.appendChild(comment)
+     singleComment.appendChild(commentImage)
+     singleComment.appendChild(namesDiv)
+     commentsContainer.appendChild(singleComment)
+  
 
   }
   db.collection('posts').doc(id).collection('comments').get().then((snapshot)=>{

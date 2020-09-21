@@ -27,7 +27,7 @@ function renderPost(doc){
     </div>
     <div class="blog-content">
         <h1>${doc.data().title}</h1>
-        <p>${doc.data().body}</p>
+        <p>${doc.data().description}</p>
         <p><span class="psw"><a href="./articles.html#/${doc.id}">Read more</a></span></p>
     </div>
 </div> 
