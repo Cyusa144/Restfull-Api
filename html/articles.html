@@ -28,51 +28,43 @@
     </nav>
  <section class="article-container">
      <div class="article-image">
-        <img src="../photos/220px-Bonnieclyde_f.webp" alt="">
+        
      </div>
      <div>
-         <h2>Bonnie and clyde</h2>
-        <p>
-            Bonnie Elizabeth Parker (October 1, 1910 – May 23, 1934) and Clyde Chestnut Barrow (March 24, 1909 – May 23, 1934) were an American criminal couple who traveled the Central United States with their gang during the Great Depression, known for their bank robberies, although they preferred to rob small stores or rural gas stations. Their exploits captured the attention of the American press and its readership during what is occasionally referred to as the "public enemy era" between 1931 and 1934. They are believed to have murdered at least nine police officers and four civilians. They were killed in May 1934 during an ambush by police near Gibsland, Louisiana.
-
-            The press's portrayal of Bonnie and Clyde was sometimes at odds with the reality of their life on the road, especially for Parker. She was present at 100 or more felonies during the two years that she was Barrow's companion,[1] although she was not the cigar-smoking, machine gun-wielding killer depicted in newspapers, newsreels, and pulp detective magazines of the day. Nonetheless, numerous police accounts detail her attempts to murder police officers (although gang member W.D. Jones contradicted them at trial).[2][3] A photo of Parker posing with a cigar came from an undeveloped roll of negatives that police found at an abandoned hideout, and the snapshot was published nationwide. Parker did chain smoke Camel cigarettes, although she never smoked cigars.[4][notes 1] According to historian Jeff Guinn, the photos found at the hideout resulted in Parker's glamorization and the creation of myths about the gang. 
-        </p>
+         <h2 class="title"></h2>
+        <p class="body">
+           </p>
      </div>
  </section>
  <section class="comment-section">
-     <div class="comment-list" >
+
          <h2>Comments</h2>
-        
-        
-     </div>
      <div class="commenting-section" style="width: 100%; float: left;">
         <form class="form-container">
             <label for="names">Names</label>
             <input type="text" id="names" name="names" placeholder="Names..">
     
-            <label for="names">Email</label>
+            <label for="email">Email</label>
             <input type="text" id="email" name="email" placeholder="email..">
         
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Write something.." style="height:80px"></textarea>
+            <label for="message">comment</label>
+            <textarea id="comment" name="comment" placeholder="Write something.." style="height:80px"></textarea>
             
-            <div class="comment-button">
-                <input type="button" value="comment">
-            </div>
-           
+            
+           <button type="submit">comment</button>
           </form>
-          <div class="single-comment" >
-            <img class="comment-image" src="../photos/mee.jpg"  alt="">
-            <p style="width: 80%; float: left;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione fugiat vero perspiciatis! Animi, eaque similique aspernatur a eius aut earum cumque alias, reiciendis voluptas sed nisi sit ab quos? Animi.</p>
-        </div>
-        <div class="single-comment">
-            <img class="comment-image" src="../photos/mee.jpg" alt="">
-            <p style="width: 80%; float: left;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione fugiat vero perspiciatis! Animi, eaque similique aspernatur a eius aut earum cumque alias, reiciendis voluptas sed nisi sit ab quos? Animi.</p>
-        </div>
+          <div class="comments-container">
+            
+          </div>
+          
      </div>
  </section>
- 
- <script src="../script/app.js">
+ <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-storage.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+          
+ <script src="../script/posts.js">
     
  </script>
    

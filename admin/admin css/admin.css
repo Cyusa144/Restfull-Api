@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+/* Pattern from https://www.transparenttextures.com/ */
+html{
+    height: 100%;
+}
+header{
+    background: black;
+    text-align: end;
+}
+header ul  {
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    
+}
+header ul li {
+    float: left;
+    position: relative;
+}
+header ul li ul {
+    position: absolute;
+    top: 66px;
+    right: 0px;
+    width: 180px;
+}
+header ul li a {
+    display: block;
+    padding: 21px;
+    font-size: 1.1em;
+    text-decoration: none;
+    margin-top: -46px;
+    color: white;
+}
+
+.nav{
+    
+    
+}
+#branding{
+    color: white;
+    text-align: left;
+}
+body {
+    
+    
+}
+
+}
+.wrapper {
+    display: flex;
+    position: relative;
+  
+}
+.wrapper .sidebar ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    color: aliceblue;
+}
+.wrapper .sidebar ul li a{
+    padding: 18px;
+    display: block;
+    color: #fff;
+    border-bottom: 1px solid #004044;
+}
+.wrapper .sidebar ul li a:hover{
+    background: solid #004044;
+}
+.wrapper .sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #0f0f0f;
+    padding: 30px 0;
+}
+.wrapper .sidebar h2{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.admin-content {
+    margin-left: 300px;
+    height: 100%;
+    
+    overflow-y: scroll;
+}
+.admin-content .page-title {
+    text-align: center;
+    padding: 40px 100px 100px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+}
+th,td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #d3d3d3;
+}
+.delete {
+    color: red;
+}
+.edit {
+    color: green;
+}
+.publish {
+    color: blue;
+}
+form div{
+    margin-bottom: 15px;
+}
+input[type=text],input[type=password], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=button] {
+    background-color:#05386b;
+    color:;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=button]:hover {
+    background-color:white;
+    color: black;
+    border: 1px solid black;
+  }
+  
+
+.btn-big{
+    border: #05386b, solid 2px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    background-color: #05386b;
+    
+  }
