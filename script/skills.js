@@ -1,3 +1,4 @@
+
 var firebaseConfig = {
     apiKey: "AIzaSyA3pn7TTuOUoGPk3pliVUgbH5-xIysHHj8",
     authDomain: "cyusa-project-9570e.firebaseapp.com",
@@ -12,6 +13,17 @@ firebase.initializeApp(firebaseConfig);
   firebase.analytics();
   const db = firebase.firestore();
   const ref = firebase.storage().ref();
+  db.collection('skills').get().then((snapshot)=>{
+  
+    snapshot.docs.forEach(doc => {
+      console.log(doc.data())
+     renderSkills(doc)
+      
+    });
+    
+  }).catch(function(error) {
+    console.log("Error getting documents: ", error);
+  });
   
 
 let imageLink;
@@ -46,27 +58,26 @@ const coverImage = document.querySelector('.cover-image')
  addSkillProject.reset()
   })
 
-function renderSkilld(doc){
-  const skillContainer = document.querySelector('.skill-container')
-     const skillImage = document.createElement('img')
-     skillImage.setAttribute('src')
-     let commentName = document.createElement('p')
-     commentName.textContent=doc.data().name
+function renderSkills(doc){
+  const skillContainer = document.querySelector('.skills-container')
+    //  let skillImage = document.createElement('img')
+    //  skillImage.setAttribute('src','../photos/user.png')
+    //  let commentName = document.createElement('p')
+    //  commentName.textContent=doc.data().name
 
 
-     skillsContainer.appendChild(skillImage)
-     skillsContainer.appendChild(skillName)
-
+    //  skillContainer.appendChild(skillImage)
+    //  skillContainer.appendChild(skillName)
+  
+    let skills = `<div class="portolio-item" >
+                   <img class="image" src="${doc.data().coverImage}" alt="">
+                  <p class="portofolio-paragraph">${doc.data().description}</p>
+                 </div>`
+                 skillContainer.innerHTML += skills
 
 }
-db.collection('skills').doc(id)..get().then((snapshot)=>{
-  //console.log(doc.data())
-  snapshot.docs.forEach(doc => {
-   renderSkills(doc)
-    
-  });
-  
-})
+
+
 
 
 
