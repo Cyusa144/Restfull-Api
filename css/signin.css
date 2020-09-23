@@ -67,7 +67,7 @@ header nav{
     background: #ffffff;
     color: black;
 }
-.signin-form{
+#modal-signin{
     width: 30%;
     margin-left: 35%;
     margin-top: 10%;
