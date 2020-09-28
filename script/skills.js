@@ -1,88 +1,77 @@
 
-var firebaseConfig = {
-    apiKey: "AIzaSyA3pn7TTuOUoGPk3pliVUgbH5-xIysHHj8",
-    authDomain: "cyusa-project-9570e.firebaseapp.com",
-    databaseURL: "https://cyusa-project-9570e.firebaseio.com",
-    projectId: "cyusa-project-9570e",
-    storageBucket: "cyusa-project-9570e.appspot.com",
-    messagingSenderId: "1085067100368",
-    appId: "1:1085067100368:web:9496966a0e62e503f91ed5",
-    measurementId: "G-3X352JZ9HR"
-};
-firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-  const db = firebase.firestore();
-  const ref = firebase.storage().ref();
-  db.collection('skills').get().then((snapshot)=>{
+const skillsList = document.querySelector('#skills-list');
+const form1 = document.querySelector('#add-skills-form1');
+const skillUserView = document.querySelector('#skill-user-view');
+
+// create element and render cafe
+function renderCafe(doc){
+  let li = document.createElement('li');
+  let name = document.createElement('img');
+  let city = document.createElement('span');
+  let cross = document.createElement('div');
+
   
-    snapshot.docs.forEach(doc => {
-      console.log(doc.data())
-     renderSkills(doc)
-      
-    });
-    
-  }).catch(function(error) {
-    console.log("Error getting documents: ", error);
-  });
-  
+  li.setAttribute('data-id',doc.id);
+  name.setAttribute('src', doc.data().coverImage);
+  name.classList.add("img-skills")
+  city.textContent = doc.data().description;
+  cross.textContent = 'x';
 
-let imageLink;
-const coverImage = document.querySelector('.cover-image')
- coverImage.addEventListener('change',function(){
-   const file =coverImage.files[0]
-   const name = file.name
-  
-   const metadata = {
-     contentType:file.type 
+  li.appendChild(name);
+  li.appendChild(city);
+  li.appendChild(cross);
 
-   }
-
-   const task = ref.child(name).put(file,metadata)
-     task.then(snapshot => snapshot.ref.getDownloadURL())
-     .then(url =>{
-       imageLink = url
-     })
- })
+  skillsList.appendChild(li);
 
 
-  const addSkillProject=document.querySelector('.add-skill-project');
-  addSkillProject.addEventListener('submit', function(e){
-    e.preventDefault()
-    db.collection('skills').add({
-      
-      
-      description: addSkillProject.description.value,
-      coverImage:imageLink
-
-    })
- addSkillProject.reset()
+  //deleting data
+  cross.addEventListener('click',(e) =>{
+      e.stopPropagation();
+      let id = e.target.parentElement.getAttribute('data-id');
+      db.collection('skills').doc(id).delete();
   })
-
-function renderSkills(doc){
-  const skillContainer = document.querySelector('.skills-container')
-    //  let skillImage = document.createElement('img')
-    //  skillImage.setAttribute('src','../photos/user.png')
-    //  let commentName = document.createElement('p')
-    //  commentName.textContent=doc.data().name
-
-
-    //  skillContainer.appendChild(skillImage)
-    //  skillContainer.appendChild(skillName)
+}
+function renderSkillUserView(doc){
+  let li = document.createElement('li');
+  let name = document.createElement('img');
+  let city = document.createElement('span');
   
-    let skills = `<div class="portolio-item" >
-                   <img class="image" src="${doc.data().coverImage}" alt="">
-                  <p class="portofolio-paragraph">${doc.data().description}</p>
-                 </div>`
-                 skillContainer.innerHTML += skills
 
+  
+  li.setAttribute('data-id',doc.id);
+  name.setAttribute('src', doc.data().coverImage);
+  name.classList.add("img-skills")
+  city.textContent = doc.data().description;
+  
+
+  li.appendChild(name);
+  li.appendChild(city);
+
+  skillUserView.appendChild(li);
 }
 
 
+db.collection('skills').get().then((snapshot) =>{
+  //console.log(doc.data())
+  snapshot.docs.forEach(doc => {
+      renderCafe(doc);
+  })
+});
 
 
+db.collection('skills').get().then((snapshot) =>{
+  snapshot.docs.forEach(doc =>{
+    renderSkillUserView(doc);
+  })
+})
 
-
-
-
-
-  
+//saving data
+form1.addEventListener('submit',(e) => {
+  e.preventDefault();
+  db.collection('skills').add({
+      coverImage:form1.coverImage.value,
+      description:form1.description.value
+  });
+  form1.coverImage.value = '';
+  form1.description.value = '';
+})

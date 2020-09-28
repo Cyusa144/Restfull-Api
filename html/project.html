@@ -3,7 +3,7 @@
 <head>
     <title>index</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/posts.css">
+    <link rel="stylesheet" href="../css/b.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -24,44 +24,34 @@
 
        <div class="wrapper">
            <div class="sidebar">
-             <h2>Dashboard</h2>
+             
              <ul>
-                 <li><a href="../html/create-users.html"><i class="fa fa-user">&nbsp;User</i></a></li>
-                 <li><a href="#"><i class="fa fa-user">&nbsp;About</i></a></li>
+                 
+                 <li><a href="../html/message.html"><i class="fa fa-user">&nbsp;messages</i></a></li>
                  <li><a href="../html/skill.html"><i class="fa fa-user">&nbsp;Skills</i></a></li>
                  <li><a href="../html/project.html"><i class="fa fa-user">&nbsp;Projects</i></a></li>
-                 <li><a href="../html/post.html"><i class="fa fa-hourglass">&nbsp;blogs</i></a></li>
+                 <li><a href="../html/blog-list.html"><i class="fa fa-hourglass">&nbsp;blog list</i></a></li>
                  <li><a href="https://www.google.com/?q=google+home" class="logout">log Out </output></a></li>
              </ul>
            </div>
        </div>
-       <div class="admin-content">
-           
-        <div class="content">
-            <h2 class="page-title">Add project</h2>
-            <form class="add-project">
-               <div>
-                   <label for="">picture</label>
-                   <input type="file" name="file" accept="image/*" class="cover-image" required>
-               </div>
-               
-               <div>
-                <label for="description">Description</label>
-                <input type="text" name="description" id="description" class="text-input" required>
-              </div>
-             
-              
-               <button type="submit" style="width: 50px;margin-left: 42px;">Add</button> 
-           </form>
-        </div>
-      </div>
-   </div>
+       <div class="content-form">
+
+        <form id="add-project-form">
+            <input type="file" name="coverImage" placeholder="choose picture">
+            <input type="text" name="description" placeholder="description">
+            <button>Add blog</button>
+        </form>
+
+        <ul id="project-list"></ul>
+
+    </div>
 
             <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
             <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
             <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-storage.js"></script>
             <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
-          
+      <script src="../script/firebase-config.js"></script>    
     <script src="../script/projects.js"></script>
 </body>
 </html>

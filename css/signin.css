@@ -100,7 +100,7 @@ input[type=text],input[type=password], textarea {
     border: black 1px solid;
   }
 
-  .containers{
+  .container{
     color: white;
     margin-top: 15px;
     width: 80%;
@@ -280,9 +280,11 @@ header nav{
     text-align: center;
     padding-top: 30px;
     font-size: 30px;
+    color: white;
 }
 .social-media span {
     margin-left: 5px;
+    color: white;
 }
 hr.line {
     height: 6px;
@@ -316,7 +318,6 @@ hr{
     border: 1px solid black;
 }
 
-}
 #toggle{
     display: none;
     

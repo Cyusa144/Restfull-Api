@@ -1,71 +1,88 @@
-// var firebaseConfig = {
-//     apiKey: "AIzaSyA3pn7TTuOUoGPk3pliVUgbH5-xIysHHj8",
-//     authDomain: "cyusa-project-9570e.firebaseapp.com",
-//     databaseURL: "https://cyusa-project-9570e.firebaseio.com",
-//     projectId: "cyusa-project-9570e",
-//     storageBucket: "cyusa-project-9570e.appspot.com",
-//     messagingSenderId: "1085067100368",
-//     appId: "1:1085067100368:web:9496966a0e62e503f91ed5",
-//     measurementId: "G-3X352JZ9HR"
-// };
-// firebase.initializeApp(firebaseConfig);
-//   firebase.analytics();
-  //const db = firebase.firestore();
- // const ref = firebase.storage().ref();
-  db.collection('projects').get().then((snapshot)=>{
-  
-    snapshot.docs.forEach(doc => {
-      console.log(doc.data())
-     renderProjects(doc)
-      
-    });
-    
-  }).catch(function(error) {
-    console.log("Error getting documents: ", error);
-  });
+const cafeList1 = document.querySelector('#project-list');
+const form = document.querySelector('#add-project-form');
+const  projectUserView = document.querySelector('#project-list-user')
 
 
-  
-//const coverImage = document.querySelector('.cover-image')
- coverImage.addEventListener('change',function(){
-  let imageLink;
-   const file =coverImage.files[0]
-   const name = file.name
-  
-   const metadata = {
-     contentType:file.type 
+// create element and render cafe
+function renderCafe1(doc){
+  let li = document.createElement('li');
+  let name = document.createElement('img');
+  let city = document.createElement('span');
+  let cross = document.createElement('div');
 
-   }
+  li.setAttribute('data-id',doc.id);
+  name.setAttribute('src',doc.data().coverImage);
+  name.classList.add('img-skills')
+  city.textContent = doc.data().description;
+  cross.textContent = 'x';
 
-   const task = ref.child(name).put(file,metadata)
-     task.then(snapshot => snapshot.ref.getDownloadURL())
-     .then(url =>{
-       imageLink = url
-     })
- })
-  
+  li.appendChild(name);
+  li.appendChild(city);
+  li.appendChild(cross);
 
-  const addProject=document.querySelector('.add-project');
-  addProject.addEventListener('submit', function(e){
-    e.preventDefault()
-    db.collection('projects').add({
-      
-      
-      description: addProject.description.value,
-      coverImage:imageLink
+  cafeList1.appendChild(li);
 
-    })
- addProject.reset()
+
+  //deleting data
+  cross.addEventListener('click',(e) =>{
+      e.stopPropagation();
+      let id = e.target.parentElement.getAttribute('data-id');
+      db.collection('projects').doc(id).delete();
   })
-
-function renderProjects(doc){
-  const projectContiner = document.querySelector('.project-container')
-
-  let projects = `<div class="portfolio-item" >
-                   <img class="image" src="${doc.data().coverImage}" alt="">
-                   <p class="portofolio-paragraph">${doc.data().description}</p>
-                  </div>`
-                 projectContiner.innerHTML += projects
-
 }
+
+
+function renderprojectUser(doc){
+  let li = document.createElement('li');
+  let name = document.createElement('img');
+  let city = document.createElement('span');
+  
+
+  li.setAttribute('data-id',doc.id);
+  name.setAttribute('src',doc.data().coverImage);
+  name.classList.add('img-skills')
+  city.textContent = doc.data().description;
+  
+
+  li.appendChild(name);
+  li.appendChild(city);
+  
+
+  projectUserView.appendChild(li);
+}
+
+
+
+
+
+
+
+db.collection('projects').get().then((snapshot) =>{
+  //console.log(doc.data())
+  snapshot.docs.forEach(doc => {
+
+   renderCafe1(doc);
+     
+  })
+});
+
+
+db.collection('projects').get().then((snapshot) => {
+  snapshot.docs.forEach(doc => {
+    renderprojectUser(doc)
+  })
+})
+//saving data
+form.addEventListener('submit',(e) => {
+  e.preventDefault();
+  db.collection('projects').add({
+      coverImage:form.coverImage.value,
+      description:form.description.value
+  });
+  form.coverImage.value = '';
+  form.description.value = '';
+})
+
+
+
 

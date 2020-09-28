@@ -30,7 +30,7 @@
          </div>
      </nav>
      <div class="contact-form">
-        <form>
+        <form class="create-message">
             <label class="label-container" for="names">Names</label>
             <input type="text" id="names" name="names" placeholder="Names..">
 
@@ -38,9 +38,9 @@
             <input type="text" id="email" name="email" placeholder="email..">
         
             <label class="label-container" for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Write something.." style="height:100px"></textarea>
+            <textarea type="text" id="message" name="message" placeholder="Write something.." style="height:100px"></textarea>
         
-            <input class="signin-button" type="button" value="Send">
+            <button class="signin-button" type="submit">Send</button>
       </form>
           
          
@@ -77,9 +77,16 @@
             <i class="fa fa-youtube"></i>
         </span>
      </footer>
-       <script src="../script/app.js">
-        
-       </script>
+
+     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-storage.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+<script src="../script/firebase-config.js"></script>    
+       
+       <script src="../script/message.js"></script>
+       <script src="../script/app.js"></script>
+       
 </body>
 
 </html>

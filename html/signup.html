@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Sign in</title>
+    <title>Sign up</title>
     <link rel="stylesheet" href="../css/signin.css">
     
 
@@ -33,15 +33,18 @@
          </div>
     </nav>
     <div id="modal-signin" class="modal">
-        <form class="signin-form">
+        <form class="signup-form">
             <div class="container">
+                <label class="label-container" id="" for="email" ><b>name</b></label>
+                <input type="text" id="name" placeholder="Enter name" name="email" style="height: 40px;" required>
+
                 <label class="label-container" id="" for="email" ><b>email</b></label>
                 <input type="text" id="email" placeholder="Enter email" name="email" style="height: 40px;" required>
 
                 <label class="label-container" for="psw" ><b>Password</b></label>
                 <input type="password" id="password"  placeholder="Enter Password" name="psw" required>
                 <div>
-                 <input type="submit" value="Login" >
+                 <input type="submit" value="Signup" >
                </div>
             </div>
 
@@ -79,7 +82,7 @@
      <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-storage.js"></script>
      <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
 <script src="../script/firebase-config.js"></script>    
-<script src="../script/signin.js"></script>
+<script src="../script/signup.js"></script>
 <script src="../script/app.js"></script>
 </body>
 </body>

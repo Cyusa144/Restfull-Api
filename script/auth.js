@@ -10,7 +10,10 @@ signinForm.addEventListener('submit',(e) =>{
   
   //sign in the user
   auth.createUserWithEmailAndPassword(email, password).then(cred => {
-     console.log(Credential)
+     console.log(cred.user);
+    //  const modal = document.querySelector('#modal-signin in');
+    //  M.modal.getInstance(modal).close();
+     signinForm.reset()
   })
 
 
