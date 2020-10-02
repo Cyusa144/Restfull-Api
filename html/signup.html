@@ -33,16 +33,16 @@
          </div>
     </nav>
     <div id="modal-signin" class="modal">
-        <form class="signup-form">
+        <form id="signup-form">
             <div class="container">
-                <label class="label-container" id="" for="email" ><b>name</b></label>
-                <input type="text" id="name" placeholder="Enter name" name="email" style="height: 40px;" required>
+                <!-- <label class="label-container" id="" for="email" ><b>name</b></label>
+                <input type="text" id="name" placeholder="Enter name" name="email" style="height: 40px;" required> -->
 
                 <label class="label-container" id="" for="email" ><b>email</b></label>
-                <input type="text" id="email" placeholder="Enter email" name="email" style="height: 40px;" required>
+                <input type="email" id="email" placeholder="Enter email" name="email" style="height: 40px;" required>
 
-                <label class="label-container" for="psw" ><b>Password</b></label>
-                <input type="password" id="password"  placeholder="Enter Password" name="psw" required>
+                <label class="label-container" for="password" ><b>Password</b></label>
+                <input type="password" id="password"  placeholder="Enter Password" name="password" required>
                 <div>
                  <input type="submit" value="Signup" >
                </div>
@@ -79,10 +79,14 @@
 
      <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
      <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
      <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-storage.js"></script>
      <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
-<script src="../script/firebase-config.js"></script>    
-<script src="../script/signup.js"></script>
+    
+
+<script src="../script/firebase-config.js"></script>
+<script src="../script/signup.js"></script>    
+<!-- <script src="../script/signup.js"></script> -->
 <script src="../script/app.js"></script>
 </body>
 </body>

@@ -3,6 +3,11 @@ const skillsList = document.querySelector('#skills-list');
 const form1 = document.querySelector('#add-skills-form1');
 const skillUserView = document.querySelector('#skill-user-view');
 const ref = firebase.storage().ref();
+skillUserView.style.display = 'grid';
+skillUserView.style.gridColumnGap='20px';
+skillUserView.style.rowGap='15px';
+skillUserView.style.gridTemplateColumns='repeat(4,1fr)';
+skillUserView.style.padding='10px';
   
 
 let imageLink;
@@ -24,66 +29,31 @@ const coverImage = document.querySelector('.cover-image')
  })
 
 // create element and render cafe
-function renderCafe(doc){
+
+function renderSkillUserView(doc){
   let li = document.createElement('li');
   let name = document.createElement('img');
   let city = document.createElement('span');
-  let cross = document.createElement('div');
+  
 
   
   li.setAttribute('data-id',doc.id);
   name.setAttribute('src', doc.data().coverImage);
   name.classList.add("img-skills")
   city.textContent = doc.data().description;
-  cross.textContent = 'x';
+  
 
   li.appendChild(name);
   li.appendChild(city);
-  li.appendChild(cross);
 
-  skillsList.appendChild(li);
-
-
-  //deleting data
-  cross.addEventListener('click',(e) =>{
-      e.stopPropagation();
-      let id = e.target.parentElement.getAttribute('data-id');
-      db.collection('skills').doc(id).delete();
-  })
+  skillUserView.appendChild(li);
 }
-// function renderSkillUserView(doc){
-//   let li = document.createElement('li');
-//   let name = document.createElement('img');
-//   let city = document.createElement('span');
-  
-
-  
-//   li.setAttribute('data-id',doc.id);
-//   name.setAttribute('src', doc.data().coverImage);
-//   name.classList.add("img-skills")
-//   city.textContent = doc.data().description;
-  
-
-//   li.appendChild(name);
-//   li.appendChild(city);
-
-//   skillUserView.appendChild(li);
-// }
-
 
 db.collection('skills').get().then((snapshot) =>{
-  //console.log(doc.data())
-  snapshot.docs.forEach(doc => {
-      renderCafe(doc);
+  snapshot.docs.forEach(doc =>{
+    renderSkillUserView(doc);
   })
-});
-
-
-// db.collection('skills').get().then((snapshot) =>{
-//   snapshot.docs.forEach(doc =>{
-//     renderSkillUserView(doc);
-//   })
-// })
+})
 
 //saving data
 form1.addEventListener('submit',(e) => {

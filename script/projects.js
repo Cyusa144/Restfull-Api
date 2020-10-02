@@ -1,6 +1,26 @@
 const cafeList1 = document.querySelector('#project-list');
 const form = document.querySelector('#add-project-form');
-const  projectUserView = document.querySelector('#project-list-user')
+// const  projectUserView = document.querySelector('#project-list-user')
+const ref = firebase.storage().ref();
+  
+
+let imageLink;
+const coverImage = document.querySelector('.cover-image')
+ coverImage.addEventListener('change',function(){
+   const file =coverImage.files[0]
+   const name = file.name
+  
+   const metadata = {
+     contentType:file.type 
+
+   }
+
+   const task = ref.child(name).put(file,metadata)
+     task.then(snapshot => snapshot.ref.getDownloadURL())
+     .then(url =>{
+       imageLink = url
+     })
+ })
 
 
 // create element and render cafe
@@ -31,32 +51,6 @@ function renderCafe1(doc){
   })
 }
 
-
-function renderprojectUser(doc){
-  let li = document.createElement('li');
-  let name = document.createElement('img');
-  let city = document.createElement('span');
-  
-
-  li.setAttribute('data-id',doc.id);
-  name.setAttribute('src',doc.data().coverImage);
-  name.classList.add('img-skills')
-  city.textContent = doc.data().description;
-  
-
-  li.appendChild(name);
-  li.appendChild(city);
-  
-
-  projectUserView.appendChild(li);
-}
-
-
-
-
-
-
-
 db.collection('projects').get().then((snapshot) =>{
   //console.log(doc.data())
   snapshot.docs.forEach(doc => {
@@ -66,23 +60,24 @@ db.collection('projects').get().then((snapshot) =>{
   })
 });
 
-
-db.collection('projects').get().then((snapshot) => {
-  snapshot.docs.forEach(doc => {
-    renderprojectUser(doc)
-  })
-})
 //saving data
 form.addEventListener('submit',(e) => {
   e.preventDefault();
   db.collection('projects').add({
-      coverImage:form.coverImage.value,
+      coverImage:imageLink,
       description:form.description.value
   });
   form.coverImage.value = '';
   form.description.value = '';
 })
-
+const logout = document.querySelector('.logout');
+logout.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.location.replace('../index.html');
+   
+  // auth.signout().then(() =>{
+    console.log('user signed out');
+});
 
 
 
