@@ -2,11 +2,11 @@
 const form = document.querySelector('#add-project-form');
 const  projectUserView = document.querySelector('#project-list-user')
 // const ref = firebase.storage().ref();
-projectUserView.style.display = 'grid';
-projectUserView.style.gridColumnGap='20px';
-projectUserView.style.rowGap='15px';
-projectUserView.style.gridTemplateColumns='repeat(4,1fr)';
-projectUserView.style.padding='10px';
+// projectUserView.style.display = 'grid';
+// projectUserView.style.gridColumnGap='20px';
+// projectUserView.style.rowGap='15px';
+// projectUserView.style.gridTemplateColumns='repeat(4,1fr)';
+// projectUserView.style.padding='10px';
   
 
 // let imageLink;
@@ -30,22 +30,23 @@ projectUserView.style.padding='10px';
 
 
 function renderprojectUser(doc){
-  let li = document.createElement('li');
+  let div= document.createElement('div');
   let name = document.createElement('img');
   let city = document.createElement('span');
   
 
-  li.setAttribute('data-id',doc.id);
+  div.setAttribute('data-id',doc.id);
+  div.classList.add('list-projects')
   name.setAttribute('src',doc.data().coverImage);
   name.classList.add('img-skills')
   city.textContent = doc.data().description;
   
 
-  li.appendChild(name);
-  li.appendChild(city);
+  div.appendChild(name);
+  div.appendChild(city);
   
 
-  projectUserView.appendChild(li);
+  projectUserView.appendChild(div);
 }
 
 

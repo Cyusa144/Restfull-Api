@@ -14,6 +14,7 @@ firebase.initializeApp(firebaseConfig);
 
   let link = window.location.href
   link = link.split('/').reverse()
+
   const id = link[0]
  
 

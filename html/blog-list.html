@@ -3,7 +3,7 @@
 <head>
     <title>index</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/b.css">
+    <link rel="stylesheet" href="../css/admin.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -41,14 +41,30 @@
        
        <div class="content-form">
 
-           <form id="add-cafe-form">
-               <input type="file" name="coverImage" placeholder="choose picture">
-               <input type="text" name="description" placeholder="description">
-               <input type="text" name="body" placeholder="body">
-               <button>Add blog</button>
+           <form id="add-blog-form">
+            <div>
+                <label for=""></label>
+                <input type="file" name="file" accept="image/*" class="cover-image" required>
+            </div>
+            <div>
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" class="text-input" required>
+            </div>
+            <div>
+             <label for="description">Description</label>
+             <input type="text" name="description" id="description" class="text-input" required>
+           </div>
+            <div>
+                <label for="">body</label>
+                <textarea name="body" id="body" style="height: 250px;" style="height: 300px;" required></textarea>
+            </div>
+           
+            <button type="submit" style="width: 50px;margin-left: 42px;">Add</button> 
+        </form>
+               
            </form>
 
-           <ul id="cafe-list"></ul>
+           <ul id="blog-list"></ul>
 
        </div>
 
@@ -97,9 +113,14 @@
 
             <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
             <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+
             <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-storage.js"></script>
             <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
           
+    
+    <script src="../script/firebase-config.js"></script>
     <script src="../script/b.js"></script>
+
 </body>
 </html>

@@ -1,24 +1,45 @@
-var firebaseConfig = {
-    apiKey: "AIzaSyA3pn7TTuOUoGPk3pliVUgbH5-xIysHHj8",
-    authDomain: "cyusa-project-9570e.firebaseapp.com",
-    databaseURL: "https://cyusa-project-9570e.firebaseio.com",
-    projectId: "cyusa-project-9570e",
-    storageBucket: "cyusa-project-9570e.appspot.com",
-    messagingSenderId: "1085067100368",
-    appId: "1:1085067100368:web:9496966a0e62e503f91ed5",
-    measurementId: "G-3X352JZ9HR"
-};
-firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-  const db = firebase.firestore();
+// var firebaseConfig = {
+//     apiKey: "AIzaSyA3pn7TTuOUoGPk3pliVUgbH5-xIysHHj8",
+//     authDomain: "cyusa-project-9570e.firebaseapp.com",
+//     databaseURL: "https://cyusa-project-9570e.firebaseio.com",
+//     projectId: "cyusa-project-9570e",
+//     storageBucket: "cyusa-project-9570e.appspot.com",
+//     messagingSenderId: "1085067100368",
+//     appId: "1:1085067100368:web:9496966a0e62e503f91ed5",
+//     measurementId: "G-3X352JZ9HR"
+// };
+// firebase.initializeApp(firebaseConfig);
+//   firebase.analytics();
+//   const db = firebase.firestore();
 
 
-const cafeList = document.querySelector('#cafe-list');
-const form = document.querySelector('#add-cafe-form');
+const blogList = document.querySelector('#blog-list');
+const form = document.querySelector('#add-blog-form');
+const ref = firebase.storage().ref();
+
+
+let imageLink;
+const coverImage = document.querySelector('.cover-image')
+ coverImage.addEventListener('change',function(){
+   const file =coverImage.files[0]
+   const name = file.name
+  
+   const metadata = {
+     contentType:file.type 
+
+   }
+
+   const task = ref.child(name).put(file,metadata)
+     task.then(snapshot => snapshot.ref.getDownloadURL())
+     .then(url =>{
+       imageLink = url
+     })
+ })
 
  
-// create element and render cafe
-function renderCafe(doc){
+// create element and render posts
+
+function renderPost(doc){
     let li = document.createElement('li');
     let name = document.createElement('img');
     let city = document.createElement('span');
@@ -38,7 +59,7 @@ function renderCafe(doc){
     li.appendChild(cross);
     li.appendChild(edit);
 
-    cafeList.appendChild(li);
+    blogList.appendChild(li);
 
 
     //deleting data
@@ -52,7 +73,7 @@ function renderCafe(doc){
 db.collection('posts').get().then((snapshot) =>{
     //console.log(doc.data())
     snapshot.docs.forEach(doc => {
-        renderCafe(doc);
+        renderPost(doc);
     })
 });
 
@@ -60,13 +81,26 @@ db.collection('posts').get().then((snapshot) =>{
 form.addEventListener('submit',(e) => {
     e.preventDefault();
     db.collection('posts').add({
-        coverImage:form.coverImage.value,
-        description:form.description.value
+        coverImage:imageLink ,
+        title:form.title.value,
+        description:form.description.value,
+        body:form.body.value
+
     });
     form.coverImage.value = '';
+    form.title.value = '';
     form.description.value = '';
+    form.body.value = '';
 })
-
+//log out
+const logout = document.querySelector('.logout');
+logout.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.location.replace('../index.html');
+   
+  // auth.signout().then(() =>{
+    console.log('user signed out');
+});
 
 
 

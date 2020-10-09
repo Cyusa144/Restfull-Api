@@ -1,4 +1,4 @@
-* {
+/* * {
     padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -62,14 +62,14 @@ header nav{
     border-radius: 5px;
 
 }
-.skills-container {
+/* .skills-container {
     display: grid;
     grid-column-gap: 20px;
     row-gap: 15px;
     grid-template-columns: repeat(4,1fr);
     padding: 10px;
 
-}
+} */
 .portofolio-paragraph{
     margin-left: 70px;
     width: 180px;
@@ -129,6 +129,22 @@ header nav{
 .img-skills{
     width: 324px;
     height: 190px;
+}
+#skill-user-view{
+    display: grid;
+    grid-column-gap: 5px;
+    row-gap: 5px;
+    grid-template-columns: repeat(4,1fr);
+    padding: 5px;
+    width: auto;
+    }
+#project-list-user{
+    display: grid;
+    grid-column-gap: 5px;
+    row-gap: 5px;
+    grid-template-columns: repeat(4,1fr);
+    padding: 5px;
+    width: auto;
 }
 h2{
     padding: 100px;
@@ -359,7 +375,6 @@ hr{
     border: 1px solid black;
 }
 
-}
 #toggle{
     display: none;
     
@@ -434,18 +449,18 @@ hr{
         margin: 0 10px;
         line-height: 60px;
     }
-    #toggle: checked + ul {
+    #toggle:checked + ul {
         display: block;
     }  
     
     .menu-item{
         display: block;
     }
-    .skills-container,.project-container{
+    /* .skills-container,.project-container{
         grid-template-columns:repeat(1,1fr);
         text-align: center;
         width: auto;
-    }
+    } */
     .about-paragraph{
         margin-left: -3px;
         float: none;
@@ -457,101 +472,13 @@ hr{
         text-align: center;
         width: 100%;    
     }
-}
-@media(max-width: 768px){
-    .toggle-button{
-        display: flex;
+    #skill-user-view{
+    display: grid;
+    grid-column-gap: 5px;
+    row-gap: 5px;
+    grid-template-columns: repeat(1,1fr);
+    padding: 5px;
     }
-    .navbar-links{
-        display: none;
-        width: 100%;
-    }
-    .navbar{
-        flex-direction: column;
-        align-items: flex-start;
-
-    }
-    .navbar-links ul {
-        width: 100%;
-        flex-direction: column;
-    }
-    .navbar-links li {
-        text-align: center;
-    } 
-    .navbar-links li a {
-        padding: .5rem 1rem;
-    }
-    .navbar-links.active {
-        display: flex;
-    }
-   
-    body {
-        margin-left: 8%;
-        margin-right: 5%;
-    }
-    
-    header nav,
-    header nav li{
-        float: none;
-        text-align: center;
-        width: 100%;
-        display: none;
-        
-    }
-    .navigation{
-        background: rgba(0, 0, 0, 0.5);
- 
-    }
-    h1{
-        display: none;
-    }
-    label{
-        display: block;
-        cursor: pointer;
-        text-align:end;
-        margin-top: -30px;
-        margin-right: -19px;
-
-    }
-    ul{
-        text-align: center;
-        width: 100%;
-        margin: 0 30px 0 0;
-        
-    }
-    ul a{
-        
-        border-bottom: 1px #05386b solid;
-        margin: 0;
-        clear: right;
-        text-decoration: none;
-        margin: 0 10px;
-        line-height: 60px;
-    }
-    #toggle: checked + ul {
-        display: block;
-    }  
-    
-    .menu-item{
-        display: block;
-    }
-    .skills-container,.project-container{
-        grid-template-columns:repeat(1,1fr);
-        text-align: center;
-        width: auto;
-    }
-    .about-paragraph{
-        margin-left: -3px;
-        float: none;
-        text-align: center;
-        width: 100%;  
-    }
-    .about-section{
-        float: none;
-        text-align: center;
-        width: 100%;    
-    }
-}
 
 @media(max-width: 1024px){
     .toggle-button{
@@ -623,18 +550,18 @@ hr{
         margin: 0 10px;
         line-height: 60px;
     }
-    #toggle: checked + ul {
+    #toggle:checked + ul {
         display: block;
     }  
     
     .menu-item{
         display: block;
     }
-    .skills-container,.project-container{
+    /* .skills-container,.project-container{
         grid-template-columns:repeat(1,1fr);
         text-align: center;
         width: auto;
-    }
+    } */
     .about-paragraph{
         margin-left: -3px;
         float: none;
@@ -646,6 +573,11 @@ hr{
         text-align: center;
         width: 100%;    
     }
+    #skill-user-view{
+        display: grid;
+        grid-column-gap: 5px;
+        row-gap: 5px;
+        grid-template-columns: repeat(1,1fr);
+        padding: 5px;
+        }
 }
-
-

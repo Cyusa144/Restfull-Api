@@ -13,12 +13,12 @@ firebase.analytics();
 const db = firebase.firestore();
 
 
-const cafeList = document.querySelector('#cafe-list');
-const form = document.querySelector('#add-cafe-form');
+const messageList = document.querySelector('#message-list');
+const form = document.querySelector('#add-message-form');
 
 
 // create element and render cafe
-function renderCafe(doc){
+function renderMesssage(doc){
   let li = document.createElement('li');
   let name = document.createElement('span');
   let email = document.createElement('span');
@@ -38,7 +38,7 @@ function renderCafe(doc){
   li.appendChild(message);
   li.appendChild(cross);
 
-  cafeList.appendChild(li);
+  messageList.appendChild(li);
 
 
   //deleting data
@@ -52,7 +52,7 @@ function renderCafe(doc){
 db.collection('messages').get().then((snapshot) =>{
   //console.log(doc.data())
   snapshot.docs.forEach(doc => {
-      renderCafe(doc);
+      renderMesssage(doc);
   })
 });
 
@@ -66,6 +66,15 @@ form.addEventListener('submit',(e) => {
   form.coverImage.value = '';
   form.description.value = '';
 })
+//log out
+const logout = document.querySelector('.logout');
+logout.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.location.replace('../index.html');
+   
+  // auth.signout().then(() =>{
+    console.log('user signed out');
+});
 
 
 

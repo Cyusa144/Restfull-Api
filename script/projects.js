@@ -70,6 +70,8 @@ form.addEventListener('submit',(e) => {
   form.coverImage.value = '';
   form.description.value = '';
 })
+
+//log out
 const logout = document.querySelector('.logout');
 logout.addEventListener('click', (e) => {
   e.preventDefault();
@@ -78,6 +80,5 @@ logout.addEventListener('click', (e) => {
   // auth.signout().then(() =>{
     console.log('user signed out');
 });
-
 
 
