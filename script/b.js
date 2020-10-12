@@ -40,13 +40,13 @@ const coverImage = document.querySelector('.cover-image')
 // create element and render posts
 
 function renderPost(doc){
-    let li = document.createElement('li');
+    let div = document.createElement('div');
     let name = document.createElement('img');
     let city = document.createElement('span');
     let cross = document.createElement('div');
     let edit = document.createElement('a');
 
-    li.setAttribute('data-id',doc.id);
+    div.setAttribute('data-id',doc.id);
     name.setAttribute('src',doc.data().coverImage);
     name.classList.add("img-skills");
     city.textContent = doc.data().description;
@@ -54,12 +54,12 @@ function renderPost(doc){
     edit.textContent = 'edit';
     edit.setAttribute('href','edit-blog.html?id=' + doc.id)
 
-    li.appendChild(name);
-    li.appendChild(city);
-    li.appendChild(cross);
-    li.appendChild(edit);
+    div.appendChild(name);
+    div.appendChild(city);
+    div.appendChild(cross);
+    div.appendChild(edit);
 
-    blogList.appendChild(li);
+    blogList.appendChild(div);
 
 
     //deleting data

@@ -1,4 +1,4 @@
-const cafeList1 = document.querySelector('#project-list');
+const projectList = document.querySelector('#project-list');
 const form = document.querySelector('#add-project-form');
 // const  projectUserView = document.querySelector('#project-list-user')
 const ref = firebase.storage().ref();
@@ -23,8 +23,8 @@ const coverImage = document.querySelector('.cover-image')
  })
 
 
-// create element and render cafe
-function renderCafe1(doc){
+// create element and render projects
+function renderProjects(doc){
   let li = document.createElement('li');
   let name = document.createElement('img');
   let city = document.createElement('span');
@@ -40,7 +40,7 @@ function renderCafe1(doc){
   li.appendChild(city);
   li.appendChild(cross);
 
-  cafeList1.appendChild(li);
+  projectList.appendChild(li);
 
 
   //deleting data
@@ -55,7 +55,7 @@ db.collection('projects').get().then((snapshot) =>{
   //console.log(doc.data())
   snapshot.docs.forEach(doc => {
 
-   renderCafe1(doc);
+   renderProjects(doc);
      
   })
 });

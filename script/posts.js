@@ -14,20 +14,20 @@ firebase.initializeApp(firebaseConfig);
 
   let link = window.location.href
   link = link.split('/').reverse()
-
   const id = link[0]
  
 
- const imageDiv=document.querySelector('.article-image');
+ const imageDiv=document.querySelector('.article-image-img');
  let title = document.querySelector('.title');
  let body = document.querySelector('.body')
-
+ let description = document.querySelector('.description')
 
  function renderArticle(doc){
   let image = document.createElement('img')
   image.setAttribute('src',doc.data().coverImage)
   imageDiv.appendChild(image)
   title.textContent=doc.data().title
+  description.textContent=doc.data().description
   body.textContent=doc.data().body
    
  }

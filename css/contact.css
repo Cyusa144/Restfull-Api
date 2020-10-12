@@ -114,9 +114,9 @@ label{
     display: none;
 }
 
-#toggle{
-    display: none;
-}
+/* .toggle{
+    display: flex;
+} */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -317,11 +317,10 @@ hr{
     border: 1px solid black;
 }
 
-}
-#toggle{
+/* #toggle{
     display: none;
     
-}
+} */
 
 @media(max-width: 768px){
     .toggle-button{
@@ -397,9 +396,9 @@ hr{
         line-height: 40px;
     }
 
-    #toggle:checked + ul{
+    /* #toggle:checked + ul{
         display: block;
-    }
+    } */
     .contact-form{
         width: 100%;
         flex-direction: column;
@@ -487,9 +486,9 @@ hr{
         line-height: 40px;
     }
 
-    #toggle:checked + ul{
+    /* #toggle:checked + ul{
         display: block;
-    }
+    } */
     .contact-form{
         width: 100%;
         flex-direction: column;

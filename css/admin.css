@@ -321,6 +321,8 @@ button{
     grid-template-columns: repeat(4,1fr);
     padding: 15px;
 } */
+/* #toggle{
+    display: none; */
   @media only screen and (max-width:750px) {
     .toggle-button{
         display: flex;
@@ -370,9 +372,9 @@ button{
       }
       header ul li 
 
-      header .menu-toggle {
+    /* .toggle:checked + header  {
         display: block;
-    }
+    } */
     .admin-content{
         width: auto;
         margin-left: auto;
@@ -430,8 +432,10 @@ button{
               padding-left: 50px;
           }
           header ul li 
-    
-          header .menu-toggle {
+        /* .toggle:checked + ul  {
+            display: block;
+        } */
+        header .menu-toggle {
             display: block;
         }
         .admin-content{

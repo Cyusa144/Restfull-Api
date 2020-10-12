@@ -479,7 +479,14 @@ hr{
     grid-template-columns: repeat(1,1fr);
     padding: 5px;
     }
-
+    #project-list-user{
+        display: grid;
+        grid-column-gap: 5px;
+        row-gap: 5px;
+        grid-template-columns: repeat(1,1fr);
+        padding: 5px;
+        }
+    
 @media(max-width: 1024px){
     .toggle-button{
         display: flex;
