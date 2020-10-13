@@ -96,11 +96,18 @@ form1.addEventListener('submit',(e) => {
   form1.description.value = '';
 })
 //log out
-const logout = document.querySelector('.logout');
-logout.addEventListener('click', (e) => {
+const signout = document.querySelector('.logout');
+signout.addEventListener('click', (e) => {
   e.preventDefault();
-  window.location.replace('../index.html');
-   
-  // auth.signout().then(() =>{
+  auth.signOut().then(() => {
     console.log('user signed out');
+    window.location.replace('../index.html');
+  })
+});
+
+//Handle Account Status
+firebase.auth().onAuthStateChanged(user => {
+  if(!user) {
+    window.location = 'signin.html'; //If User is not logged in, redirect to login page
+  }
 });

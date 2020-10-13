@@ -13,7 +13,7 @@ loginForm.addEventListener('submit', (e) =>{
 
   auth.signInWithEmailAndPassword(email,password).then(cred =>{
      loginForm.reset();
-      window.location.replace('../Html/project.html');
+      window.location.replace('../Html/blog-list.html');
    
   })
 })
