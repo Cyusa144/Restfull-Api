@@ -14,6 +14,8 @@ loginForm.addEventListener('submit', (e) =>{
   auth.signInWithEmailAndPassword(email,password).then(cred =>{
      loginForm.reset();
       window.location.replace('../html/blog-list.html');
+
+ 
    
   })
 })
