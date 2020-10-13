@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            
+                <div id="branding">
+                    <h1>Cyusa I Jacob</h1>
+                    <a href="#" class="toggle-button">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </a> 
+                </div>
+                
+               
+       </header> 
+       <div class="wrapper">
+           <div class="sidebar">
+             <h2>Dashboard</h2>
+             <ul>
+                 <li><a href="./users.html"><i class="fa fa-user">&nbsp;user</i></a></li>
+                
+                 <li><a href="./post.html"><i class="fa fa-hourglass">&nbsp;posts</i></a></li>
+                 <li><a href="https://www.google.com/?q=google+home" class="logout">log out </output></a></li>
+                
+             </ul>
+           </div>
+        </div>
+        <div class="admin-content">
+           
+            <div class="content">
+                <h2 class="page-title">Add article</h2>
+                <form action="create.html" method="POST">
+                   <div>
+                       <label for="">picture</label>
+                       <input type="file" name="title" class="text-input">
+                   </div>
+                   <div>
+                       <label for="">Title</label>
+                       <input type="text" name="title" class="text-input">
+                   </div>
+                   <div>
+                       <label for="">body</label>
+                       <textarea name="body" id="body" style="height: 250px;"></textarea>
+                   </div>
+                   <div>
+                     <label for="">Topic</label>
+                     <select name="topic" id="" class="text-input">
+                         <option value="poetry">poetry</option>
+                         <option value="life-lessons">life lesssons</option>
+                       </select>
+                   </div>
+                   
+               </form>
+            </div>
+          </div>
+       </div>
+   <script src="../script/admin.js">
+       
+    </script> 
+</body>
+</html>

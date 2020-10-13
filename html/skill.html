@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            
+                <div class="navbar" id="branding">
+                    <h1>Cyusa I Jacob</h1>
+                    <a href="#" class="toggle-button">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </a> 
+                </div>
+                
+        </header>
+
+       <div class="wrapper">
+           <div class="sidebar">
+             <ul>
+                 
+                 <li><a href="../html/message.html"><i class="fa fa-user">&nbsp;messages</i></a></li>
+                 <li><a href="../html/skill-project.html"><i class="fa fa-user">&nbsp;Skills</i></a></li>
+                 <li><a href="../html/project.html"><i class="fa fa-user">&nbsp;Projects</i></a></li>
+                 <li><a href="../html/blog-list.html"><i class="fa fa-hourglass">&nbsp;blog list</i></a></li>
+                 <li><a href="https://www.google.com/?q=google+home" class="logout">log Out </output></a></li>
+             </ul>
+           </div>
+       </div>
+       <div class="content-form">
+
+        <form id="add-skills-form1">
+            <div>
+                <label for=""></label>
+                <input type="file" name="file" accept="image/*" class="cover-image" required>
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <input type="text" name="description" id="description" class="text-input" required>
+              </div>
+            <button>Add skill</button>
+        </form>
+
+        <ul id="skills-list"></ul>
+
+    </div>
+
+
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-storage.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+      <script src="../script/firebase-config.js"></script>    
+    <script src="../script/skills.js"></script>
+    <script src="../script/app.js"></script>
+
+    
+
+</body>
+</html>

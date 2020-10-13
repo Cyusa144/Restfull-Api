@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="../css/signin.css">
+    
+
+<body>
+
+    <nav class="navbar">
+        <div class="brand-title">Cyusa I Jacob</div>
+         <a href="#" class="toggle-button">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+         </a> 
+         <div class="navbar-links">
+            <ul>
+                    
+                <li><a href="../index.html" class="menu-item active">HOME</a></li>
+                <li><a href="./about.html" class="menu-item">ABOUT</a></li>
+                <li><a href="./blog.html" class="menu-item">BLOG</a></li>
+                <li><a href="./contact.html" class="menu-item">CONTACT</a></li>
+            
+                <li><a href="./signin.html" class="signin-button">SIGN IN</a></li>
+            </ul>
+         </div>
+    </nav>
+    <div id="modal-signin" class="modal">
+        <form id="signin-form">
+            <div class="container">
+                <label class="label-container" id="email" for="email" ><b>email</b></label>
+                <input type="text" id="email" placeholder="Enter email" name="email" style="height: 40px;" required>
+
+                <label class="label-container" for="password" ><b>Password</b></label>
+                <input type="password" id="password"  placeholder="Enter Password" name="password" required>
+                <div>
+                 <input type="submit" value="Login" >
+               </div>
+            </div>
+
+            <div class="containers" >
+               
+            </div>
+        </form>
+
+    </div>
+    <footer class="social-media">
+        <hr class="line">  
+        <span class="icon">
+            <i class="fa fa-facebook"></i>
+        </span>
+        <span class="icon">
+            <i class="fa fa-instagram"></i>
+        </span>
+        <span class="icon">
+            <i class="fa fa-linkedin"></i>
+        </span>
+        <span class="icon">
+            <i class="fa fa-twitter"></i>
+        </span>
+        <span class="icon">
+            <i class="fa fa-youtube"></i>
+        </span>
+     </footer>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- <script src="../script/auth.js"></script>
+  <script src="../script/app.js"></script> -->
+
+     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-storage.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+<script src="../script/firebase-config.js"></script>    
+<script src="../script/signin.js"></script> 
+<script src="../script/app.js"></script>
+</body>
+</body>
+
+</html>

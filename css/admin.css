@@ -1,0 +1,448 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+/* Pattern from https://www.transparenttextures.com/ */
+
+/* ul{
+    border-left: 5px solid #ddd;
+    padding: 20px;
+    margin: 20px 10px;
+} */
+
+html{
+   
+}
+header{
+    background: black;
+    text-align: end;
+}
+header ul  {
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    
+}
+header ul li {
+   
+    position: relative;
+}
+header ul li ul {
+    position: absolute;
+    top: 66px;
+    right: 0px;
+    width: 180px;
+}
+header ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 1.1em;
+    text-decoration: none;
+    margin-top: -46px;
+    color: white;
+}
+header ul li a:hover{
+    background: #004044;
+    transition: 0.5s;
+}
+header .menu-toggle {
+    display: flex;
+}
+
+.nav{
+    
+    
+}
+#branding{
+    color: white;
+    text-align: left;
+}
+body {
+    
+}
+.wrapper {
+    display: flex;
+    position: relative;
+  
+}
+.wrapper .sidebar ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    color: aliceblue;
+}
+.wrapper .sidebar ul li a{
+    padding: 18px;
+    display: block;
+    color: #fff;
+    border-bottom: 1px solid #004044;
+}
+.wrapper .sidebar ul li a:hover{
+    background: solid #555;
+}
+.wrapper .sidebar {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background: #0f0f0f;
+    padding: 30px 0;
+}
+.wrapper .sidebar h2{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.admin-content {
+    margin-left: 300px;
+    
+    overflow: hidden;
+    
+    
+    overflow-y: scroll;
+}
+.admin-content .page-title {
+    text-align: center;
+    padding: 20px 100px 20px;
+    
+}
+.content{
+    
+}
+.border{
+    display: grid;
+    grid-column-gap: 5px;
+    row-gap: 5px;
+    grid-template-columns: repeat(7,1fr);
+    padding: 5px;
+}
+.content form{
+    display: grid;
+    grid-column-gap: 5px;
+    row-gap: 5px;
+    grid-template-columns: repeat(7,1fr);
+    padding: 5px;
+}
+
+form div{
+    margin-bottom: 15px;
+}
+input[type=text],input[type=password], textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 5px;
+    resize: vertical;
+
+  }
+  
+  input[type=button] {
+    background-color:#05386b;
+    color:white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=button]:hover {
+    background-color:white;
+    color: black;
+    border: 1px solid black;
+  }
+.button-group{
+    margin-top:10px;
+} 
+
+
+.toggle-button{
+    position: absolute;
+    top:.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+border{
+    display: grid;
+    grid-column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: repeat(1,1fr);
+    padding: 15px;
+}
+.content form{
+    display: grid;
+    grid-column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: repeat(1,1fr);
+    padding: 15px;
+}
+
+h2{
+    color: #fff;
+    font-size: 64px;
+    letter-spacing: 2px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.content-form{
+    background: #fff;
+    width: 60%;
+    margin: 30px auto;
+    padding:  20px 30px;
+    border-radius: 10px 120px 10px 10px;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1)
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    padding: 20px;
+    background: #f6f6f6;
+    font-size: 20px;
+    color: #555;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    height: 130px;
+}
+
+li:nth-child(even){
+    padding: 20px;
+    background: #f2f2f2;
+}
+
+li span{
+    display: block;
+}
+
+li span:nth-child(2){
+    font-size: 16px;
+    margin-top: 6px;
+    color: #999;
+}
+
+li div{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background: rgba(255,255,255,0.6);
+    width: 40px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight:  bold;
+    cursor:  pointer;
+}
+
+form input{
+    float: left;
+    width: 225px;
+    margin: 0;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    margin: -55px 1%;
+    padding: 10px;
+    display: block;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+form input:focus{
+    outline: none;
+    border-bottom: 3px solid #88236f;
+    padding-bottom: 8px;
+    transition: all ease 0.2s;
+}
+
+form:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+button{
+    border: 0;
+    background: #fff;
+    border-radius: 10px;
+    padding: 13px;
+    width: 14%;
+    box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
+    font-weight: bold;
+    font-family: ubuntu;
+    letter-spacing: 1px;
+    color: #999;
+}
+
+.sidebar ul li {
+    background: #0f0f0f;
+    color: #fff;
+}
+/* #skill-user-view{
+    display: grid;
+    grid-column-gap: 5px;
+    row-gap: 5px;
+    grid-template-columns: repeat(7,1fr);
+    padding: 5px;
+} */
+#project-list-user{
+    display: grid;
+    grid-column-gap: 5px;
+    row-gap: 5px;
+    grid-template-columns: repeat(7,1fr);
+    padding: 5px;
+}
+.img-skills {
+    width: 30px;
+    
+}
+/* .list-skills{
+    display: grid;
+    grid-column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+    padding: 15px;
+} */
+/* #toggle{
+    display: none; */
+  @media only screen and (max-width:750px) {
+    .toggle-button{
+        display: flex;
+    }
+    .wrapper{
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .wrapper ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .wrapper li {
+        text-align: center;
+    } 
+    .wrapper li a {
+        padding: .5rem 1rem;
+    }
+    .wrapper.active {
+        display: flex;
+    }
+      header ul {
+          width: 100%;
+          background: #004044;
+          max-height: 0px;
+          overflow: hidden;
+      }
+      header ul li {
+          width: 100%;
+
+      }
+      header ul li ul {
+          position: static;
+          display: block;
+          width: 100%;
+      }
+      header ul li ul a {
+          padding: 10px;
+          background: #004044;
+          color: white;
+          padding-left: 50px;
+      }
+      header ul li 
+
+    /* .toggle:checked + header  {
+        display: block;
+    } */
+    .admin-content{
+        width: auto;
+        margin-left: auto;
+        padding: 20px 20px 20px;
+    }
+  
+    #add-blog-form{
+        display: block;
+    }
+    @media only screen and (max-width:1024px) {
+        .toggle-button{
+            display: flex;
+        }
+        .wrapper{
+            display: none;
+            width: 100%;
+        }
+        .navbar{
+            flex-direction: column;
+            align-items: flex-start;
+    
+        }
+        .wrapper ul {
+            width: 100%;
+            flex-direction: column;
+        }
+        .wrapper li {
+            text-align: center;
+        } 
+        .wrapper li a {
+            padding: .5rem 1rem;
+        }
+        .wrapper.active {
+            display: flex;
+        }
+          header ul {
+              width: 100%;
+              background: #004044;
+              max-height: 0px;
+              overflow: hidden;
+          }
+          header ul li {
+              width: 100%;
+    
+          }
+          header ul li ul {
+              position: static;
+              display: block;
+              width: 100%;
+          }
+          header ul li ul a {
+              padding: 10px;
+              background: #004044;
+              color: white;
+              padding-left: 50px;
+          }
+          header ul li 
+        /* .toggle:checked + ul  {
+            display: block;
+        } */
+        header .menu-toggle {
+            display: block;
+        }
+        .admin-content{
+            width: auto;
+            margin-left: auto;
+            padding: 20px 20px 20px;
+        }
+      
+        }
+

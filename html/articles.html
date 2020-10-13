@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/articles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-title">Cyusa I Jacob</div>
+         <a href="#" class="toggle-button">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+         </a> 
+         <div class="navbar-links">
+            <ul>
+                    
+                <li><a href="../index.html" class="menu-item active">HOME</a></li>
+                <li><a href="./about.html" class="menu-item">ABOUT</a></li>
+                <li><a href="./blog.html" class="menu-item">BLOG</a></li>
+                <li><a href="./contact.html" class="menu-item">CONTACT</a></li>
+               
+                <li><a href="./signin.html" class="signin-button">SIGN IN</a></li>
+            </ul>
+         </div>
+    </nav>
+ <section class="article-image">
+     <div class="">
+        
+     </div>
+     <div>
+        <h2 class="title"></h2>
+        <div class="article-image-img"></div>
+        <p class="description"> </p>
+        <p class="body"> </p>
+     </div>
+ </section>
+ <section class="comment-section">
+
+         <h2>Comments</h2>
+     <div class="commenting-section" style="width: 100%; float: left;">
+        <form class="form-container">
+            <label for="names">Names</label>
+            <input type="text" id="names" name="names" placeholder="Names..">
+    
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="email..">
+        
+            <label for="message">comment</label>
+            <textarea id="comment" name="comment" placeholder="Write something.." style="height:80px"></textarea>
+            
+            
+           <button class="submit-comment" type="submit">comment</button>
+          </form>
+          <div class="comments-container">
+            
+          </div>
+          
+     </div>
+ </section>
+ <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-storage.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+          
+ <script src="../script/posts.js"></script>
+ <script src="../script/app.js"></script>
+
+   
+</body>
+</html>

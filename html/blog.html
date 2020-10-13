@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>index</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <title>Blog</title>
+    <link rel="stylesheet" href="../css/blog.css">
 </head>
 <body>
     <nav class="navbar">
@@ -19,24 +20,19 @@
          <div class="navbar-links">
             <ul>
                     
-                <li><a href="./index.html" class="menu-item active">HOME</a></li>
-                <li><a href="./html/about.html" class="menu-item">ABOUT</a></li>
-                <li><a href="./html/blog.html" class="menu-item">BLOG</a></li>
-                <li><a href="./html/contact.html" class="menu-item">CONTACT</a></li>
-                
-                <li><a href="./html/signin.html" class="signin-button">SIGN IN</a></li>
+                <li><a href="../index.html" class="menu-item active">HOME</a></li>
+                <li><a href="./about.html" class="menu-item">ABOUT</a></li>
+                <li><a href="./blog.html" class="menu-item">BLOG</a></li>
+                <li><a href="./contact.html" class="menu-item">CONTACT</a></li>
+               
+                <li><a href="./signin.html" class="signin-button">SIGN IN</a></li>
             </ul>
          </div>
     </nav>
-    
-    <div class="container">
-       
-         <section class="bio-container">
-            
-             <p class="bio"> <span>Hi </span> I am Cyusa I.Jacob, </br>I am a <span class="develop">JavaScript Developer</span> </p>
-         </section>
-    </div>
-
+    <section class="blog-list">
+        
+        
+    </section>
     <footer class="social-media">
         <hr class="line">  
         <span class="icon">
@@ -55,8 +51,21 @@
             <i class="fa fa-youtube"></i>
         </span>
      </footer>
-     <script src="script/app.js">
+     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-storage.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+            
+                
+    
+    <script src="../script/firebase-config.js"> </script>
+    <script src="../script/blog.js"></script>
+    
+    
+
         
-     </script>
+    </script>
 </body>
+
 </html>

@@ -1,0 +1,349 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+/* Pattern from https://www.transparenttextures.com/ */
+body {
+    background-color: #0e0d0d;
+    color: blanchedalmond;
+}
+.mainer-header{
+    margin-top: -40px;
+}
+.header {
+    width: 100%;
+    float: left;
+    padding-top: 0px;
+    line-height: 200px;
+}
+
+.logo {
+    width: 30%;
+    float:left;
+    text-align: center;
+}
+.logo span {
+    font-size: 25px;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu {
+    width: 40%;
+    float:left;
+    font-size: 20px;
+    text-align: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover {
+    font-weight: bolder;
+}
+
+
+.active {
+    font-weight: bolder;
+}
+.tres{
+    width: 500px;
+  height: 352p
+}
+.title-paragraph{
+    font-family: poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 15px;
+    margin-top: 15px;
+    margin-left:150px
+}
+.hiring-paragraph{
+    font-family: poppins;
+    font-style: normal;
+    font-weight: regular;
+    font-size: 20px;
+    line-height: 15px;
+    margin-top: 70px;
+    margin-left:150px ;
+  }
+hr{
+    margin-top: 30px;
+    width: 400px;
+    height: 6px;
+    border: none;
+    margin-left: 150px;
+    top: 1991px;
+  }
+.hiring-form{
+    margin-left: 250px;
+    margin-top: 100px;
+  }
+.green-button{
+    margin-left: 150px;
+    margin-top: 20px;
+    width: 250px;
+    height: 50px;
+    background: #86FA4F;
+    background: #86FA4F;
+  }
+
+.my-form{
+      margin-top: 400px;
+  }
+.hiring-form{
+      margin-left: 30px;
+  }
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+/* Pattern from https://www.transparenttextures.com/ */
+html{
+    height: 100%;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #0e0d0d;
+    color: blanchedalmond;
+}
+/* Change */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+.brand-title{
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links li{
+    list-style: none;
+}
+.navbar-links li a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+.navbar-links li:hover{
+    background-color: #555;
+
+}
+.toggle-button{
+    position: absolute;
+    top:.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    height: 100vh;
+}
+header{
+    margin-bottom: 100px;
+}
+header a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-top: 30px;
+    min-height: 70px;
+}
+
+header a:hover{
+    font-weight: 700;
+}
+
+header ul{
+    margin: 0;
+    padding: 0;
+}
+
+header li{
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+    margin-top: 10px;
+}
+
+header #branding h1{
+    margin: 0;
+}
+
+header nav{
+    float: right;
+    margin-top: 20px;
+}
+
+.signin-button{
+    text-decoration: none;
+    color: white;
+    background: #05386b;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.signin-button:hover{
+    background: #ffffff;
+    color: black;
+}
+.bio-container{
+    
+    
+    height: 90%;
+    background-image: url("../photos/mee.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 230px;
+    
+   
+    
+   
+}
+
+.develop{
+    color:coral;
+    font-weight: bold;
+    height: 10px;
+    border-bottom: 1px black solid;
+   
+}
+.bio {
+    
+   
+    margin-left: 15px;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    
+
+    
+}
+.bio span{
+    font-weight: bold;
+   
+}
+.social-media{
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 30px;
+}
+.social-media span {
+    margin-left: 5px;
+}
+hr.line {
+    height: 6px;
+    border: none;
+    background: #fa4d4d;
+    text-align: start;
+    margin-left: 0px;
+    
+    
+}
+
+
+
+hr{
+    text-align: center; 
+    margin-left: 350px; 
+    margin-top: 30px;
+}
+.signin a {
+    text-decoration: none;
+    color: white;
+    background: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.signin a:hover {
+    color: black;
+    background: white;
+    border: 1px solid black;
+}
+
+}
+#toggle{
+    display: none;
+    
+}
+@media(max-width: 768px){
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links li {
+        text-align: center;
+    } 
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+    header #branding,
+    header nav,
+    header nav li{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .signin-form{
+        display: block;
+    }
+
+   
+}
+
+
+  

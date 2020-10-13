@@ -1,0 +1,217 @@
+body{
+    background:white;
+    
+}
+header{
+    background: black;
+    text-align: end;
+}
+header ul  {
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    
+}
+header ul li {
+   
+    position: relative;
+}
+header ul li ul {
+    position: absolute;
+    top: 66px;
+    right: 0px;
+    width: 180px;
+}
+header ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 1.1em;
+    text-decoration: none;
+    margin-top: -46px;
+    color: white;
+}
+header ul li a:hover{
+    background: #004044;
+    transition: 0.5s;
+}
+header .menu-toggle {
+    display: flex;
+}
+
+.nav{
+    
+    
+}
+#branding{
+    color: white;
+    text-align: left;
+}
+body {
+    
+}
+.wrapper {
+    display: flex;
+    position: relative;
+  
+}
+.wrapper .sidebar ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    color: aliceblue;
+}
+.wrapper .sidebar ul li a{
+    padding: 18px;
+    display: block;
+    color: #fff;
+    border-bottom: 1px solid #004044;
+}
+.wrapper .sidebar ul li a:hover{
+    background: solid #555;
+}
+.wrapper .sidebar {
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    background: #0f0f0f;
+    padding: 30px 0;
+    margin-top: -22px;
+    margin-left: -8;
+}
+.wrapper .sidebar h3{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.admin-content {
+    margin-left: 300px;
+     overflow: hidden;
+    overflow-y: scroll;
+}
+.admin-content .page-title {
+    text-align: center;
+    padding: 20px 100px 20px;
+}
+.border{
+    display: grid;
+    grid-column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: repeat(1,1fr);
+    padding: 15px;
+}
+/.content form{
+    display: grid;
+    grid-column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: repeat(1,1fr);
+    padding: 15px;
+}
+
+h2{
+    color: #fff;
+    font-size: 64px;
+    letter-spacing: 2px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.content-form{
+    background: #fff;
+    width: 60%;
+    margin: 30px auto;
+    padding:  20px 30px;
+    border-radius: 10px 120px 10px 10px;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1)
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    padding: 20px;
+    background: #f6f6f6;
+    font-size: 20px;
+    color: #555;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    height: 60px;
+}
+
+li:nth-child(even){
+    padding: 20px;
+    background: #f2f2f2;
+}
+
+li span{
+    display: block;
+}
+
+li span:nth-child(2){
+    font-size: 16px;
+    margin-top: 6px;
+    color: #999;
+}
+
+li div{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background: rgba(255,255,255,0.6);
+    width: 40px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight:  bold;
+    cursor:  pointer;
+}
+
+form input{
+    float: left;
+    width: 225px;
+    margin: 0;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    margin: 0 1%;
+    padding: 10px;
+    display: block;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+form input:focus{
+    outline: none;
+    border-bottom: 3px solid #88236f;
+    padding-bottom: 8px;
+    transition: all ease 0.2s;
+}
+
+form:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+button{
+    border: 0;
+    background: #fff;
+    border-radius: 10px;
+    padding: 13px;
+    width: 14%;
+    box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
+    font-weight: bold;
+    font-family: ubuntu;
+    letter-spacing: 1px;
+    color: #999;
+}
+
+.sidebar ul li {
+    background: #0f0f0f;
+    color: #fff;
+}
+
+.img-skills {
+    width: 30px;
+}
