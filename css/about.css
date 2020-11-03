@@ -198,6 +198,7 @@ body {
     align-items: center;
     background-color: black;
     color: white;
+    /* position: fixed; */
 }
 .brand-title{
     font-size: 1.5rem;

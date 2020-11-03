@@ -1,6 +1,11 @@
 const express = require("express");
 const ArticleController = require("../controllers/article");
-const router = express.Router()
+const { verifyToken } = require("../middleware/auth");
+const router = express.Router();
+const upload = require("../middleware/upload");
+const multerConfig = require("../middleware/multerConfig");
+
+
 
 const {
 	getAllArticles,
@@ -14,15 +19,15 @@ const {
 router.get("/", getAllArticles)
 
 // Add new article
-router.post("/", addNewArticle)
+router.post("/", verifyToken, multerConfig, addNewArticle)
 	
 // Get single article
 router.get("/:id", getSingleArticle)
 
 // Update article
-router.patch("/:id", updateArticle)
+router.patch("/:id", verifyToken, updateArticle)
 
 // Delete article
-router.delete("/:id", deleteArticle)
+router.delete("/:id", verifyToken, deleteArticle)
 
 module.exports = router

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node rest-api/index.js",
+    "dev": "nodemon rest-api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,8 +20,13 @@
   },
   "homepage": "https://github.com/Cyusa144/bootcamp-project#readme",
   "dependencies": {
+    "cloudinary": "^1.23.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.10.9"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.9",
+    "multer": "^1.4.2",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nodemon": "^2.0.6"
   }
 }
