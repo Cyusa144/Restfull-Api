@@ -65,7 +65,7 @@ const updateArticle = async (req, res) => {
 const deleteArticle = async (req, res) => {
 	try {
 		await articleModel.deleteOne({ _id: req.params.id })
-		res.send({ success: "Article deleted" }).status(204)
+		res.send({ success: "Article successfully deleted" }).status(204)
 	} catch(error) {
 		res.send({ error: "Article doesn't exist!" }).status(404)
 	} 
