@@ -1,5 +1,9 @@
-const userModel = require("../models/user");
-const { generateToken } = require("../helpers/token");
+import userModel from "../models/user";
+import { generateToken } from "../helpers/token";
+import {
+	validator,
+	validationErrors
+} from "../validation";
 
 
 const addNewUser = async (req, res) => {
@@ -35,7 +39,7 @@ const loginUser = async(req, res) => {
 	}
 };
 
-module.exports = {
+export {
     addNewUser,
     loginUser
 }

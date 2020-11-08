@@ -1,5 +1,5 @@
-const jwt = require("jsonwebtoken");
-const ENV = require("dotenv");
+import jwt from "jsonwebtoken";
+import ENV from "dotenv";
 
 ENV.config();
 
@@ -18,6 +18,6 @@ const verifyToken = async (req, res, next) => {
     return true;
 };
 
-module.exports = {
+export {
     verifyToken
 }

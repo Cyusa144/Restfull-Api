@@ -1,6 +1,6 @@
-const express = require("express");
-const mongoose = require("mongoose");// new
-const routes = require("./routes");
+import express from "express";
+import mongoose from "mongoose";// new
+import routes from "./routes";
 
 const ENV = require("dotenv");
 

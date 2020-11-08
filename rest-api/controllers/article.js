@@ -1,7 +1,14 @@
-const articleModel = require("../models/article");
-const express = require("express");
-const cloud = require("../middleware/cloudinaryConfig");
-const fs = require("fs");
+import articleModel from "../models/article";
+import express from "express";
+import cloud from "../middleware/cloudinaryConfig";
+import fs from "fs";
+
+import {
+	validator,
+	validationErrors
+} from "../validation";
+
+
 
 
 const getAllArticles = async (req, res) => {
@@ -71,7 +78,7 @@ const deleteArticle = async (req, res) => {
 	} 
 };
 
-module.exports = {
+export {
     getAllArticles,
     addNewArticle,
     getSingleArticle,

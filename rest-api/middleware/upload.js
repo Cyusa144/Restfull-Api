@@ -1,5 +1,5 @@
-const path = require("path");
-const multer = require("multer");
+import path from "path";
+import multer from "multer";
 // const upload = multer();
 
 let storage = multer.diskStorage({

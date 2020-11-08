@@ -1,19 +1,19 @@
-const express = require("express");
-const ArticleController = require("../controllers/article");
-const { verifyToken } = require("../middleware/auth");
+import express from "express";
+import ArticleController from "../controllers/article";
+import { verifyToken } from "../middleware/auth";
 const router = express.Router();
-const upload = require("../middleware/upload");
-const multerConfig = require("../middleware/multerConfig");
+import upload from "../middleware/upload";
+import multerConfig from "../middleware/multerConfig";
 
 
 
-const {
+import {
 	getAllArticles,
 	addNewArticle,
 	getSingleArticle,
 	updateArticle,
 	deleteArticle
-} = ArticleController;
+} from "../controllers/article";
 
 // Get all articles
 router.get("/", getAllArticles)
@@ -30,4 +30,4 @@ router.patch("/:id", verifyToken, updateArticle)
 // Delete article
 router.delete("/:id", verifyToken, deleteArticle)
 
-module.exports = router
+export default router

@@ -1,4 +1,4 @@
-const cloudinary = require("cloudinary");
+import cloudinary from "cloudinary";
 
 cloudinary.config({
   cloud_name: "dk0bik4yw",

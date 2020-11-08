@@ -1,4 +1,8 @@
-const contactModel = require("../models/contact");
+import contactModel from "../models/contact";
+import {
+	validator,
+	validationErrors
+} from "../validation";
 
 
 const getAllContact = async (req, res) => {
@@ -31,7 +35,7 @@ const addNewContact = async (req, res) => {
 	}
 };
 
-module.exports = {
+export {
     getAllContact,
     addNewContact
 }
