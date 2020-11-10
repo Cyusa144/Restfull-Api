@@ -1,8 +1,6 @@
 import express from "express";
-import ArticleController from "../controllers/article";
 import { verifyToken } from "../middleware/auth";
 const router = express.Router();
-import upload from "../middleware/upload";
 import multerConfig from "../middleware/multerConfig";
 
 

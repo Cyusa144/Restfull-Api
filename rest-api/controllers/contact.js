@@ -17,10 +17,10 @@ const getAllContact = async (req, res) => {
 
 const addNewContact = async (req, res) => {
     try {
-        const { error } = validator('contact', req.body);
-        if (error) {
-            return validationErrors(res, error);
-        }
+        // const { error } = validator('contact', req.body);
+        // if (error) {
+        //     return validationErrors(res, error);
+        // }
         const contact = new contactModel({
             name: req.body.name,
             email: req.body.email,
