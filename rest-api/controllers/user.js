@@ -35,7 +35,7 @@ const loginUser = async(req, res) => {
 		res.status(200).send({token})
 	} catch(error) {
 		res.status(404)
-		res.send({ error: "user doesn't exist!" })
+		res.send({ error:error.message})
 	}
 };
 

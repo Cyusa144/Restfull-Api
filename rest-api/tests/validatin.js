@@ -33,7 +33,8 @@ describe('Validator', () => {
         const data = {
             name: 'Cyusa Jacob',
             username: 'cyusa',
-            password: '13413r2#asfdafa!'
+            email:'cyusa@gmail.com',
+            password: '123'
         };
         const validate = validator('user', data);
         expect(validate.value.name).to.equal(data.name);
