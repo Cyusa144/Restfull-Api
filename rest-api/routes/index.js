@@ -10,3 +10,5 @@ app.use('/contact', contactRoutes);
 app.use('/user', userRoutes);
 
 export default app;
+
+// /api//user

@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">2.6% </span>
+                <span class="strong">3.9% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/77</span>
+                <span class='fraction'>3/77</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">2.6% </span>
+                <span class="strong">3.9% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/77</span>
+                <span class='fraction'>3/77</span>
             </div>
         
             
@@ -233,51 +233,8 @@
 <a name='L174'></a><a href='#L174'>174</a>
 <a name='L175'></a><a href='#L175'>175</a>
 <a name='L176'></a><a href='#L176'>176</a>
-<a name='L177'></a><a href='#L177'>177</a>
-<a name='L178'></a><a href='#L178'>178</a>
-<a name='L179'></a><a href='#L179'>179</a>
-<a name='L180'></a><a href='#L180'>180</a>
-<a name='L181'></a><a href='#L181'>181</a>
-<a name='L182'></a><a href='#L182'>182</a>
-<a name='L183'></a><a href='#L183'>183</a>
-<a name='L184'></a><a href='#L184'>184</a>
-<a name='L185'></a><a href='#L185'>185</a>
-<a name='L186'></a><a href='#L186'>186</a>
-<a name='L187'></a><a href='#L187'>187</a>
-<a name='L188'></a><a href='#L188'>188</a>
-<a name='L189'></a><a href='#L189'>189</a>
-<a name='L190'></a><a href='#L190'>190</a>
-<a name='L191'></a><a href='#L191'>191</a>
-<a name='L192'></a><a href='#L192'>192</a>
-<a name='L193'></a><a href='#L193'>193</a>
-<a name='L194'></a><a href='#L194'>194</a>
-<a name='L195'></a><a href='#L195'>195</a>
-<a name='L196'></a><a href='#L196'>196</a>
-<a name='L197'></a><a href='#L197'>197</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L177'></a><a href='#L177'>177</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -449,45 +406,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// import chai from 'chai';
-// import chaiHttp from 'chai-http';
-// import index from '../index';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">process.env.NODE_ENV = 'test';
 &nbsp;
-// chai.should();
-// chai.use(chaiHttp);
-&nbsp;
-&nbsp;
-// describe('articles', () =&gt; {
-//     it('should get all articles' , () =&gt; {
-//         chai
-//         .request(index)
-//         .get('/api/article')
-//         .then((res) =&gt; {
-//           res.should.have.status(200);
-//           res.body.articles.should.be.a('array');
-//         })
-//         .catch((error) =&gt; {
-//             console.log(error)
-//         });
-//     });
-    
-// });
-&nbsp;
-<span class="cstat-no" title="statement not covered" >process.</span>env.NODE_ENV = 'test';
-import mongoose from "mongoose";
-import Article from'../app/models/article';
+let mongoose = require("mongoose");
+let Article = require('../app/models/article');
 <span class="cstat-no" title="statement not covered" >require(</span>"dotenv").config();
 &nbsp;
 //Require the dev-dependencies
-<span class="cstat-no" title="statement not covered" >import chai from 'chai';</span>
-<span class="cstat-no" title="statement not covered" >import chaiHttp from 'chai-http';</span>
-<span class="cstat-no" title="statement not covered" >import server from '../server';</span>
-let should = <span class="cstat-no" title="statement not covered" >chai.s</span>hould();
-let expect = <span class="cstat-no" title="statement not covered" >chai.e</span>xpect();
-<span class="cstat-no" title="statement not covered" >import fs from 'fs';</span>
+let chai = <span class="cstat-no" title="statement not covered" >require('</span>chai');
+let chaiHttp = <span class="cstat-no" title="statement not covered" >require('</span>chai-http');
+let index = <span class="cstat-no" title="statement not covered" >require('</span>../index');
+let should = <span class="cstat-no" title="statement not covered" >chai.</span>should();
+let expect = <span class="cstat-no" title="statement not covered" >chai.</span>expect();
+const fs = <span class="cstat-no" title="statement not covered" >require('</span>fs');
 &nbsp;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >chai.u</span>se(chaiHttp);
+<span class="cstat-no" title="statement not covered" >chai.</span>use(chaiHttp);
 &nbsp;
 //to hold the token
 let token = <span class="cstat-no" title="statement not covered" >'';</span>
@@ -495,7 +432,7 @@ let token = <span class="cstat-no" title="statement not covered" >'';</span>
 //Our parent block
 <span class="cstat-no" title="statement not covered" >describe(</span>'Articles', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >	beforeEach(<span class="fstat-no" title="function not covered" ></span>(d</span>one) =&gt; { //Before each test we empty the database
-<span class="cstat-no" title="statement not covered" >		Article.r</span>emove({}, <span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; { 
+<span class="cstat-no" title="statement not covered" >		Article.</span>remove({}, <span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; { 
 <span class="cstat-no" title="statement not covered" >		   done();		   </span>
 		});		
 	});
@@ -504,7 +441,7 @@ let token = <span class="cstat-no" title="statement not covered" >'';</span>
   */
 <span class="cstat-no" title="statement not covered" >  describe(</span>'/GET article', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >	  it(</span>'it should GET all the articles', <span class="fstat-no" title="function not covered" >(d</span>one) =&gt; {
-<span class="cstat-no" title="statement not covered" >			chai.r</span>equest(server)
+<span class="cstat-no" title="statement not covered" >			chai.</span>request(index)
 			.get('/article')
 		    .end(<span class="fstat-no" title="function not covered" >(e</span>rr, res) =&gt; {
 <span class="cstat-no" title="statement not covered" >			  	res.</span>should.have.status(200);
@@ -530,12 +467,12 @@ let token = <span class="cstat-no" title="statement not covered" >'';</span>
 			"password": "123"
 		}
 		//send login
-<span class="cstat-no" title="statement not covered" >		chai.r</span>equest(server).post('/user/login')
+<span class="cstat-no" title="statement not covered" >		chai.</span>request(index).post('/user/login')
 		  .send(valid_input)
 		   .then(<span class="fstat-no" title="function not covered" >(l</span>ogin_response) =&gt; {
 			//add token
 <span class="cstat-no" title="statement not covered" >			token </span>= 'Bearer ' + login_response.body.token;
-<span class="cstat-no" title="statement not covered" >		 chai.r</span>equest(server)
+<span class="cstat-no" title="statement not covered" >		 chai.</span>request(index)
 		 .post('/article')
 		 .set('Authorization', token)
 		 .set('Content-Type', 'application/x-www-form-urlencoded')
@@ -555,7 +492,7 @@ let token = <span class="cstat-no" title="statement not covered" >'';</span>
    //end here
 	//start
 <span class="cstat-no" title="statement not covered" >	it(</span>'it should POST an article', <span class="fstat-no" title="function not covered" >(d</span>one) =&gt; {
-<span class="cstat-no" title="statement not covered" >		   chai.r</span>equest(server)
+<span class="cstat-no" title="statement not covered" >		   chai.</span>request(index)
 			.post('/article')
 			.set('Authorization', token)
 			.set('Content-Type', 'application/x-www-form-urlencoded')
@@ -582,7 +519,7 @@ let token = <span class="cstat-no" title="statement not covered" >'';</span>
 <span class="cstat-no" title="statement not covered" >	  it(</span>'it should GET an article by the given id', <span class="fstat-no" title="function not covered" >(d</span>one) =&gt; {
 	  	let article = <span class="cstat-no" title="statement not covered" >new A</span>rticle({ title: "Js", content: "JS is awsome", articleImage: "image to be"});
 <span class="cstat-no" title="statement not covered" >	  	article.</span>save(<span class="fstat-no" title="function not covered" >(e</span>rr, article) =&gt; {
-<span class="cstat-no" title="statement not covered" >	  		chai.r</span>equest(server)
+<span class="cstat-no" title="statement not covered" >	  		chai.</span>request(index)
 			.get('/article/' + article.id)
 			.set('Authorization', token)
 		    .send(article)
@@ -607,7 +544,7 @@ let token = <span class="cstat-no" title="statement not covered" >'';</span>
 <span class="cstat-no" title="statement not covered" >	it(</span>'it should UPDATE an article given the id', <span class="fstat-no" title="function not covered" >(d</span>one) =&gt; {
 		let article = <span class="cstat-no" title="statement not covered" >new A</span>rticle({title: "Java basics", content: "java", articleImage: "image hh"})
 <span class="cstat-no" title="statement not covered" >		article.</span>save(<span class="fstat-no" title="function not covered" >(e</span>rr, article) =&gt; {
-<span class="cstat-no" title="statement not covered" >			  chai.r</span>equest(server)
+<span class="cstat-no" title="statement not covered" >			  chai.</span>request(index)
 			  .put('/article/' + article.id)
 			  .set('Authorization', token)
 			  .send({title: "Java basics", content: "java", articleImage: "image lorem" })
@@ -628,7 +565,7 @@ let token = <span class="cstat-no" title="statement not covered" >'';</span>
 <span class="cstat-no" title="statement not covered" >	it(</span>'it should DELETE an article given the id', <span class="fstat-no" title="function not covered" >(d</span>one) =&gt; {
 		let article = <span class="cstat-no" title="statement not covered" >new A</span>rticle({title: "node", content: "node.js", articleImage: "node image"})
 <span class="cstat-no" title="statement not covered" >		article.</span>save(<span class="fstat-no" title="function not covered" >(e</span>rr, article) =&gt; {
-<span class="cstat-no" title="statement not covered" >			  chai.r</span>equest(server)
+<span class="cstat-no" title="statement not covered" >			  chai.</span>request(index)
 			  .delete('/article/' + article.id)
 			  .set('Authorization', token)
 			  .end(<span class="fstat-no" title="function not covered" >(e</span>rr, res) =&gt; {
@@ -645,6 +582,9 @@ let token = <span class="cstat-no" title="statement not covered" >'';</span>
 &nbsp;
 &nbsp;
 });
+&nbsp;
+&nbsp;
+  
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -652,7 +592,7 @@ let token = <span class="cstat-no" title="statement not covered" >'';</span>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Nov 11 2020 16:16:58 GMT+0200 (Central Africa Time)
+                at Fri Nov 13 2020 17:57:19 GMT+0200 (Central Africa Time)
             </div>
         </div>
         <script src="prettify.js"></script>

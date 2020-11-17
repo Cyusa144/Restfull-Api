@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">29.73% </span>
+                <span class="strong">43.24% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/37</span>
+                <span class='fraction'>16/37</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">3.23% </span>
+                <span class="strong">25.81% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/31</span>
+                <span class='fraction'>8/31</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">46.67% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>7/15</span>
+                <span class='fraction'>9/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">31.25% </span>
+                <span class="strong">43.75% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/32</span>
+                <span class='fraction'>14/32</span>
             </div>
         
             
@@ -157,10 +157,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -185,10 +185,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -244,10 +244,10 @@ import {
 &nbsp;
 &nbsp;
 &nbsp;
-const getAllArticles = <span class="branch-4 cbranch-no" title="branch not covered" ><span class="branch-3 cbranch-no" title="branch not covered" ><span class="branch-2 cbranch-no" title="branch not covered" ><span class="branch-1 cbranch-no" title="branch not covered" >async (r</span></span></span>eq, res) =&gt; {</span>
+const getAllArticles = <span class="branch-2 cbranch-no" title="branch not covered" >async (req, res) =&gt; {</span>
     try {
-		const <span class="cstat-no" title="statement not covered" >articles = await articleModel.find()</span>
-<span class="cstat-no" title="statement not covered" >		res.</span>status(200).send({articles})
+		const articles = await articleModel.find()
+		res.status(200).send({articles})
 	} catch (error) {
 <span class="cstat-no" title="statement not covered" >		res.</span>status(500)
 <span class="cstat-no" title="statement not covered" >		res.</span>send({ error })
@@ -272,10 +272,10 @@ const <span class="fstat-no" title="function not covered" >addNewArticle </span>
 	}
 };
 &nbsp;
-const <span class="fstat-no" title="function not covered" >getSingleArticle </span>= <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >async(r</span></span>eq, res) =&gt; {
+const getSingleArticle = <span class="branch-2 cbranch-no" title="branch not covered" >async(req, res) =&gt; {</span>
 	try {
-		const <span class="cstat-no" title="statement not covered" >article = await articleModel.findOne({ _id: req.params.id })</span>
-<span class="cstat-no" title="statement not covered" >		res.</span>status(200).send({message: "successfully fetched article", article})
+		const article = await articleModel.findOne({ _id: req.params.id })
+		res.status(200).send({message: "successfully fetched article", article})
 	} catch(error) {
 <span class="cstat-no" title="statement not covered" >		res.</span>status(404)
 <span class="cstat-no" title="statement not covered" >		res.</span>send({ error: "Article doesn't exist!" })
@@ -325,7 +325,7 @@ export {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Nov 13 2020 15:43:32 GMT+0200 (Central Africa Time)
+                at Tue Nov 17 2020 10:33:08 GMT+0200 (Central Africa Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

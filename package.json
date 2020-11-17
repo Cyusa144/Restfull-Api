@@ -6,7 +6,7 @@
   "scripts": {
     "start": "babel-node ./rest-api/index.js",
     "dev": "nodemon --exec babel-node ./rest-api/index.js",
-    "test": "nyc --reporter=html --reporter=text mocha --require @babel/polyfill --require @babel/register ./rest-api/tests/*.js --exit",
+    "test": "nyc --reporter=html --reporter=text mocha  --require @babel/polyfill --require @babel/register ./rest-api/tests/*.js --exit",
     "cover": "istanbul cover _mocha ./rest-api/tests/*.js --compilers js:babel-core/register --timeout 12000 --exit ",
     "coveralls": "npm run cover -- --report lcovonly",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
@@ -34,7 +34,7 @@
     "config": "^3.3.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "joi": "^17.3.0",
+    "joi": "^14.3.1",
     "jsonwebtoken": "^8.5.1",
     "mockgoose": "^8.0.4",
     "mongoose": "^5.10.9",
