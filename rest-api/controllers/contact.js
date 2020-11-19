@@ -36,11 +36,11 @@ const addNewContact = async (req, res) => {
 };
 const getSingleContact = async(req, res) => {
 	try {
-		const article = await articleModel.findOne({ _id: req.params.id })
+		const contact = await contactModel.findOne({ _id: req.params.id })
 		res.status(200)
 	} catch(error) {
 		res.status(404)
-		res.send({ error: "invalid article id" })
+		res.send({ error: "invalid contact id" })
 	}
 };
 
