@@ -34,8 +34,8 @@ const addNewArticle = async (req, res) => {
 	}
 	catch (error) {
 		res.status(500)
-		console.log( error )
-		// res.send({ error })
+		// console.log( error )
+		res.send({ error })
 	}
 };
 
@@ -45,7 +45,7 @@ const getSingleArticle = async(req, res) => {
 		res.status(200).send({message: "successfully fetched article", article})
 	} catch(error) {
 		res.status(404)
-		res.send({ error: "Article doesn't exist!" })
+		res.send({ error: "invalid article id" })
 	}
 };
 
@@ -65,7 +65,7 @@ const updateArticle = async (req, res) => {
 		await post.save()
 		res.status(200).send({message: "successfully updated article", post})
 	} catch(error) {
-		res.status(404).send({ error: "Article doesn't exist!" })
+		res.status(404).json({ error: "invalid article id" })
 	}
 };
 
@@ -74,7 +74,7 @@ const deleteArticle = async (req, res) => {
 		await articleModel.deleteOne({ _id: req.params.id })
 		res.send({ success: "Article successfully deleted" }).status(204)
 	} catch(error) {
-		res.send({ error: "Article doesn't exist!" }).status(404)
+		res.status(404).json({ error: "invalid article id" })
 	} 
 };
 

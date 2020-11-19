@@ -8,7 +8,7 @@ import {
 const getAllContact = async (req, res) => {
     try {
         const contact = await contactModel.find()
-        res.status(200).send(contact)
+        res.status(200).send({contact})
     } catch (error) {
 		res.status(500)
 		res.send({ error })
@@ -34,8 +34,18 @@ const addNewContact = async (req, res) => {
 		res.send({ error })
 	}
 };
+const getSingleContact = async(req, res) => {
+	try {
+		const article = await articleModel.findOne({ _id: req.params.id })
+		res.status(200)
+	} catch(error) {
+		res.status(404)
+		res.send({ error: "invalid article id" })
+	}
+};
 
 export {
     getAllContact,
-    addNewContact
+    addNewContact,
+    getSingleContact
 }
