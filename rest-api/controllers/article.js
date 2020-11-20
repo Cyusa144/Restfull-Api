@@ -16,8 +16,7 @@ const getAllArticles = async (req, res) => {
 		const articles = await articleModel.find()
 		res.status(200).send({articles})
 	} catch (error) {
-		res.status(500)
-		res.send({ error })
+		res.status(500).send({ error })
 	}
 };
 
@@ -33,20 +32,21 @@ const addNewArticle = async (req, res) => {
 		res.status(201).send({message: "successfully created article", article})
 	}
 	catch (error) {
-		res.status(500)
+		res.status(500).send({ error })
 		// console.log( error )
-		res.send({ error })
+		
 	}
 };
 
 const getSingleArticle = async(req, res) => {
 	try {
 		const article = await articleModel.findOne({ _id: req.params.id })
-		res.status(200).send({message: "successfully fetched article", article})
+		res.send({message: "successfully fetched article", article}).status(200)
 	} catch(error) {
-		res.status(404)
-		res.send({ error: "invalid article id" })
-	}
+		res.status(404).json({ error: "invalid article id" })
+	} 
+	// 	res.send({ error: "invalid article id" })
+	// }
 };
 
 const updateArticle = async (req, res) => {
