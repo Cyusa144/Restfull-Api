@@ -1,3 +1,4 @@
+import { json } from "body-parser";
 import contactModel from "../models/contact";
 import {
 	validator,
@@ -10,8 +11,9 @@ const getAllContact = async (req, res) => {
         const contact = await contactModel.find()
         res.status(200).send({contact})
     } catch (error) {
-		res.status(500)
-		res.send({ error })
+		res.status(500).json({ error })
+	// }
+	// 	res.send({ error })
 	}
 };
 
@@ -28,24 +30,35 @@ const addNewContact = async (req, res) => {
             message: req.body.message
         })
         await contact.save()
-        res.status(201).send(contact)
+        res.status(201).send({message: "successfully created contact", contact})
     } catch (error) {
-		res.status(500)
-		res.send({ error })
+		res.status(500).json({ error })
 	}
 };
 const getSingleContact = async(req, res) => {
 	try {
-		const contact = await contactModel.findOne({ _id: req.params.id })
-		res.status(200).send({contact})
+        const contact = await contactModel.findOne({ _id: req.params.id })
+        if(!contact) return res.status(404).json({status: 404,message: 'invalid contact id'})
+		return res.status(200).send({message: "successfully fetched contact", contact})
 	} catch(error) {
-		res.status(404)
-		res.send({ error: "invalid contact id" })
+        console.log(error.message)
+		// res.status(404)
+		// res.send({ error: "invalid contact id" })
 	}
+};
+
+const deleteContact = async (req, res) => {
+	try {
+		await contactModel.deleteOne({ _id: req.params.id })
+		res.send({ success: "contact successfully deleted" }).status(204)
+	} catch(error) {
+		res.status(404).json({ error: "invalid contact id" })
+	} 
 };
 
 export {
     getAllContact,
     addNewContact,
-    getSingleContact
+    getSingleContact,
+    deleteContact
 }

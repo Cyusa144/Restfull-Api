@@ -107,7 +107,7 @@ describe('Articles', () => {
 //   describe('/GET/:id article', () => {
 	  it('it should GET an article by the given id', (done) => {
 		chai.request(index)
-		.get('/api/article'+ articleId)
+		.get('/api/article/'+ '5fb4de06e9c109002a34cc22')
 		.then((res) => {
 			  res.should.have.status(200);
 		  done();
@@ -134,12 +134,12 @@ describe('Articles', () => {
 		  it('it should not GET an article given an invalid article id', (done) => {
 		
 			chai.request(index)
-			.get('/api/article/' +'5fb37ccf3ffc016309cd255')
+			.get('/api/article/' +'5fb4de06e9c109002a34cc00')
 			.set('auth', token)
 			.end((err, res) => {
 				  res.should.have.status(404);
 				  res.body.should.be.a('object');
-				  res.body.should.have.property('error').eql('invalid article id');
+				  res.body.should.have.property('message').eql('invalid article id');
 				done();
 			});
 	});	  

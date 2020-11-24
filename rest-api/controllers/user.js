@@ -17,8 +17,8 @@ const addNewUser = async (req, res) => {
 		res.status(201).send({user})
 	}
 	catch (error) {
-		res.status(500)
-		console.log( error )
+		res.status(500).json({ error })
+		// console.log( error )
 		// res.send({ error })
 	}
 };
