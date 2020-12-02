@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90.91% </span>
+                <span class="strong">84.85% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>30/33</span>
+                <span class='fraction'>28/33</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">82.35% </span>
+                <span class="strong">76.47% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>28/34</span>
+                <span class='fraction'>26/34</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">89.29% </span>
+                <span class="strong">82.14% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>25/28</span>
+                <span class='fraction'>23/28</span>
             </div>
         
             
@@ -185,35 +185,35 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">29x</span>
+<span class="cline-any cline-yes">24x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">27x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -273,19 +273,19 @@ const addNewArticle = <span class="branch-3 cbranch-no" title="branch not covere
 	}
 };
 &nbsp;
-const getSingleArticle = <span class="branch-4 cbranch-no" title="branch not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >async(r</span>eq, res) =&gt; {</span>
+const getSingleArticle = <span class="missing-if-branch" title="if path not taken" >I</span><span class="branch-2 cbranch-no" title="branch not covered" >async(r</span>eq, res) =&gt; {
 	try {
 		const article = await articleModel.findOne({ _id: req.params.id })
 		if(!article) return res.status(404).json({status: 404,message: 'invalid article id'})
 		return res.status(200).send({message: "successfully fetched article", article})
 	} catch(error) {
-<span class="cstat-no" title="statement not covered" >		console.</span>log(error.message)// res.status(404).json({ error: "invalid article id" })
+		console.log(error.message)// res.status(404).json({ error: "invalid article id" })
 	} 
 	// 	res.send({ error: "invalid article id" })
 	// }
 };
 &nbsp;
-const updateArticle = async (req, res) =&gt; {
+const updateArticle = <span class="branch-2 cbranch-no" title="branch not covered" >async (r</span>eq, res) =&gt; {
 	try {
 		
 		const post = await articleModel.findOne({ _id: req.params.id })
@@ -294,12 +294,12 @@ const updateArticle = async (req, res) =&gt; {
 			post.title = req.body.title
 		}
 &nbsp;
-		<span class="missing-if-branch" title="else path not taken" >E</span>if (req.body.content) {
-			post.content = req.body.content
+<span class="cstat-no" title="statement not covered" >		if (req.body.content) {</span>
+<span class="cstat-no" title="statement not covered" >			post.</span>content = req.body.content
 		}
 &nbsp;
 		await post.save()
-		res.status(200).send({message: "successfully updated article", post})
+<span class="cstat-no" title="statement not covered" >		res.</span>status(200).send({message: "successfully updated article", post})
 	} catch(error) {
 		res.status(404).json({ error: "invalid article id" })
 	}
@@ -328,7 +328,7 @@ export {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Nov 24 2020 17:51:28 GMT+0200 (Central Africa Time)
+                at Wed Dec 02 2020 10:19:25 GMT+0200 (Central Africa Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

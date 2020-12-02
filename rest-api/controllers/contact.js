@@ -30,7 +30,10 @@ const addNewContact = async (req, res) => {
             message: req.body.message
         })
         await contact.save()
-        res.status(201).send({message: "successfully created contact", contact})
+        res.status(201).send({
+            message: "successfully created contact", 
+            data: contact 
+        })
     } catch (error) {
 		res.status(500).json({ error })
 	}

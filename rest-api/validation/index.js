@@ -30,6 +30,7 @@ const validator = (identifier, data) => {
             name: Joi.string().trim().min(3).required(),
             username: Joi.string().trim().min(3).max(15).required(),
             password: Joi.string().trim().min(8).required()
+            
           };
           break;
         }

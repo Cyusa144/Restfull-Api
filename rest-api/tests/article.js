@@ -1,3 +1,4 @@
+// i
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 import fs from 'fs';
@@ -41,7 +42,7 @@ describe('Articles', () => {
   it('It return token when logged in with valid credentials', (done) => {
 	  //Mock login
 		const valid_input = {
-			"email": "cyusa@gmail.com",
+			"email": "jack123@gmail.com",
 			"password": "123"
 		}
 		//send login
@@ -49,9 +50,12 @@ describe('Articles', () => {
 		.post('/api/user/login')
 		.send(valid_input)
 		   .then((login_response) => {
-			//add token
+			   login_response.should.have.status(200);
+			//    login_response.should.be.a("obj")
 			token = login_response.body.token;
+			
 			done();
+			
 		});
   });
 
@@ -78,98 +82,67 @@ describe('Articles', () => {
 		done();
 		});
 	});
-   //end here
-	//start
-	// it('it should POST an article', (done) => {
-	// 	   chai.request(index)
-	// 		.post('/api/article')
-	// 		.set('Authorization', token)
-	// 		.set('Content-Type', 'application/x-www-form-urlencoded')
-	// 		.field('title', 'html')
-	// 		.field('content', 'html is awesomee')
-	// 		.attach('articleImage', 
-	// 		  fs.readFileSync('../rest-api/tests/image.jpg'), 'image.jpg')
-	// 	  .end((err, res) => {
-	// 			res.should.have.status(200);
-	// 			res.body.should.be.a('object');
-	// 			res.body.should.have.property('message').eql('Article successfully added!');
-	// 			res.body.article.should.have.property('title');
-	// 			res.body.article.should.have.property('content');
-	// 			res.body.article.should.have.property('articleImage');
-	// 		done();
-	//      });
-	//   });
-	// });
-	//end it
+  
 /*
   * Test the /GET/:id route
   */
 //   describe('/GET/:id article', () => {
 	  it('it should GET an article by the given id', (done) => {
 		chai.request(index)
-		.get('/api/article/'+ '5fb4de06e9c109002a34cc22')
+		.get('/api/article/'+ '5fb4f25c4c5adf16a2de1380')
 		.then((res) => {
-			  res.should.have.status(200);
-		  done();
-	  	// let article = new Article({ title: "Js", content: "JS is awsome", articleImage: "image to be"});
-	  	// article.save((err, article) => {
-	  		// chai.request(index)
-			// .get('/api/article/' + articleId)
-			// .set('auth', token)
-		    // .send(article)
-		    // .end((err, res) => {
-			//   	res.should.have.status(200);
-			//   	res.body.should.be.a('object');
-			//   	res.body.should.have.property('message').eql('successfully fetched article');
-			//   	res.body.should.have.property('article');
-			//   	res.body.article.should.be.a('object');
-			//   	res.body.article.should.have.property('_id')
-			// 	res.body.article.should.have.property('title');
-			// 	res.body.article.should.have.property('content');
-			// 	res.body.article.should.have.property('image');
-			// 	articleId = res.body.article._id;
-		    //   done();
+			   res.should.have.status(200);
+			  	res.body.should.be.a('object');
+			  	res.body.should.have.property('message').eql('successfully fetched article');
+			  	res.body.should.have.property('article');
+			  	res.body.article.should.be.a('object');
+			  	res.body.article.should.have.property('_id')
+				res.body.article.should.have.property('title');
+				res.body.article.should.have.property('content');
+				res.body.article.should.have.property('image');
+				articleId = res.body.article._id;
+		      done();
 		    });
 		  });
+		  
 		  it('it should not GET an article given an invalid article id', (done) => {
 		
 			chai.request(index)
-			.get('/api/article/' +'5fb4de06e9c109002a34cc00')
+			.get('/api/article/' +'5fb4f25c4c5adf16a2xx1380')
 			.set('auth', token)
 			.end((err, res) => {
 				  res.should.have.status(404);
 				  res.body.should.be.a('object');
 				  res.body.should.have.property('message').eql('invalid article id');
+				  articleId = res.body.article._id;
 				done();
 			});
 	});	  
 
 			
-	//   });
-//   });
+// 	//   });
+// //   });
 
-//   /*
-//   * Test the /PUT/:id route
-//   */
-//  describe('/PUT/:id article', () => {
+// //   /*
+// //   * Test the /PUT/:id route
+// //   */
+// //  describe('/PUT/:id article', () => {
 	it('it should UPDATE an article given the id', (done) => {
-		// let article = new Article({title: "Java basics", content: "java", articleImage: "image hh"})
-		// article.save((err, article) => {
 			  chai.request(index)
-			  .patch('/api/article/' + articleId)
+			  .patch('/api/article/' + '5fb4f25c4c5adf16a2de1380')
 			  .set('auth', token)
-			  .send({title: "Java basics", content: "java", articleImage: "image lorem" })
+			  .send({title: "Java basics", content: "java", image: "image lorem" })
 			  .end((err, res) => {
 					res.should.have.status(200);
 					res.body.should.be.a('object');
 					res.body.should.have.property('message').eql('successfully updated article');
-					// res.body.should.have.property('post');
-			  	    // res.body.post.should.be.a('object');
-			  	    // res.body.post.should.have.property('_id')
-				    // res.body.post.should.have.property('title');
-				    // res.body.post.should.have.property('content');
-				    // res.body.post.should.have.property('image');
-				    // articleId = res.body.article._id;
+					res.body.should.have.property('post');
+			  	    res.body.post.should.be.a('object');
+			  	    res.body.post.should.have.property('_id')
+				    res.body.post.should.have.property('title');
+				    res.body.post.should.have.property('content');
+				    res.body.post.should.have.property('image');
+				    articleId = res.body.article._id;
 				 done();
 			  });
 		});
@@ -185,11 +158,11 @@ describe('Articles', () => {
 				done();
 			});
 	});
-	// });
-// });
-// /*
-// * Test the /DELETE/:id route
-// */
+// // 	// });
+// // // });
+// // // /*
+// // // * Test the /DELETE/:id route
+// // // */
 
 	it('it should DELETE an article given the id', (done) => {
 		
@@ -200,8 +173,6 @@ describe('Articles', () => {
 					res.should.have.status(200);
 					res.body.should.be.a('object');
 					res.body.should.have.property('success').eql('Article successfully deleted');
-					// res.body.result.should.have.property('ok').eql(1);
-					// res.body.result.should.have.property('n').eql(1);
 				done();
 			  });
 	});
@@ -216,15 +187,11 @@ describe('Articles', () => {
 			  res.should.have.status(404);
 			  res.body.should.be.a('object');
 			  res.body.should.have.property('error').eql('invalid article id');
-			  // res.body.result.should.have.property('ok').eql(1);
-			  // res.body.result.should.have.property('n').eql(1);
 		  done();
 		});
 });
 
 
 });
-
-
 
 
