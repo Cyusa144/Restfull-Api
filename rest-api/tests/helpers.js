@@ -9,7 +9,7 @@ chai.should();
 describe('Token helper', () => {
     it('should generate a token', async () => {
       const token = await generateToken({
-        'username': 'cyusa'
+        'username': 'jack'
       });
       token.should.be.a('string');
       

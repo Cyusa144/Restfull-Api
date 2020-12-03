@@ -24,22 +24,7 @@ let userId = "";
 
 //token
 describe("Articles API", () => {
-    const token =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOWViNTc5ZTNjZGJkODgzMjVlZGZmZiIsIm5hbWUiOiJDeXVzYSIsImlhdCI6MTYwNTAxNjE2NiwiZXhwIjoxNjA1MTAyNTY2fQ.wJkXeeRAo5Bs1oeoeeHyTN3Izv5usj7XKrDNDD3SeMs";
-
-// describe('App basic tests', () => {
-  
-  before( () => {
-    //delete all users 
-    User.find().deleteMany().then( res => {
-      console.log('Users removed');
-      done();
-    }).catch(err => {
-      console.log(err.message);
-    });
-  });
-  
-
+ 
   it('Should exists', () => {
     expect(index).to.be.a('function');
   })
@@ -57,7 +42,7 @@ describe("Articles API", () => {
   it('should return 201 and confirmation for valid input', (done) => {
     //mock valid user input
     let user_input = {
-      "email": "cyusa123@gmail.com",
+      "email": "jack@gmail.com",
       "password": "123"
     }
     //send /POST request to /register
@@ -66,7 +51,7 @@ describe("Articles API", () => {
     .send(user_input)
     .then(res => {
       //validate
-      expect(res).to.have.status(200);
+      expect(res).to.have.status(201);
       expect(res.body.message).to.be.equal('User registered');
       //new validations to confirm user is saved in database
       expect(res.body.user._id).to.exist;
@@ -129,7 +114,7 @@ describe("Articles API", () => {
     it('Should return error 400 when email already registered', () => {
         //user that already exists (added in previous test)
         const new_user = {
-            "email": "cyusa123@gmail.com",
+            "email": "jack@gmail.com",
             "password": "123"
         }
         //send request to the index
@@ -152,7 +137,7 @@ describe("Articles API", () => {
   it('Should save password encrypted', (done) => {
     //mock valid user input
     const new_user = {
-      "email": "cyusa123@gmail.com",
+      "email": "jack@gmail.com",
       "password": "123"
     }
     //send request to the index
@@ -163,7 +148,9 @@ describe("Articles API", () => {
           //console.log(res.body);
           //assertions
           
+          expect(res.body.email).to.not.be.equal("jack@gmail.com");
           expect(res.body.password).to.not.be.equal("123");
+
           done();
         }).catch(err => {
           console.log(err.message);
@@ -245,7 +232,7 @@ describe("Articles API", () => {
   it('should return error 401 for invalid credentials', () => {
     //mock invalid user input
     const wrong_input = {
-      "email": "cyusa123@gmail.com",
+      "email": "jack@gmail.com",
       "password": "invalidPassword"
     }
     //send request to the index
@@ -266,7 +253,7 @@ describe("Articles API", () => {
   it('should return 200 and token for valid credentials', (done) => {
     //mock invalid user input
     const valid_input = {
-      "email": "cyusa123@gmail.com",
+      "email": "jack@gmail.com",
       "password": "123"
     }
     //send request to the index

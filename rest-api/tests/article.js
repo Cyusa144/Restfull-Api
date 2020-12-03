@@ -42,7 +42,7 @@ describe('Articles', () => {
   it('It return token when logged in with valid credentials', (done) => {
 	  //Mock login
 		const valid_input = {
-			"email": "jack123@gmail.com",
+			"email": "jack@gmail.com",
 			"password": "123"
 		}
 		//send login
@@ -89,7 +89,7 @@ describe('Articles', () => {
 //   describe('/GET/:id article', () => {
 	  it('it should GET an article by the given id', (done) => {
 		chai.request(index)
-		.get('/api/article/'+ '5fb4f25c4c5adf16a2de1380')
+		.get('/api/article/'+ articleId)
 		.then((res) => {
 			   res.should.have.status(200);
 			  	res.body.should.be.a('object');
@@ -129,7 +129,7 @@ describe('Articles', () => {
 // //  describe('/PUT/:id article', () => {
 	it('it should UPDATE an article given the id', (done) => {
 			  chai.request(index)
-			  .patch('/api/article/' + '5fb4f25c4c5adf16a2de1380')
+			  .patch('/api/article/' + articleId)
 			  .set('auth', token)
 			  .send({title: "Java basics", content: "java", image: "image lorem" })
 			  .end((err, res) => {
@@ -142,14 +142,14 @@ describe('Articles', () => {
 				    res.body.post.should.have.property('title');
 				    res.body.post.should.have.property('content');
 				    res.body.post.should.have.property('image');
-				    articleId = res.body.article._id;
+				    articleId = res.body.post._id;
 				 done();
 			  });
 		});
 		it('it should not UPDATE an article given an invalid article id', (done) => {
 		
 			chai.request(index)
-			.patch('/api/article/' +'5fb37ccf3ffc016309cd255')
+			.patch('/api/article/' +'5fb590a86516822d8d97e305')
 			.set('auth', token)
 			.end((err, res) => {
 				  res.should.have.status(404);

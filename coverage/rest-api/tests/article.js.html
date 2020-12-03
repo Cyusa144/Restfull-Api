@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">70.59% </span>
+                <span class="strong">94.12% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>60/85</span>
+                <span class='fraction'>80/85</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">70.59% </span>
+                <span class="strong">94.12% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>60/85</span>
+                <span class='fraction'>80/85</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -348,16 +348,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -390,16 +390,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -495,7 +495,7 @@ describe('Articles', () =&gt; {
   it('It return token when logged in with valid credentials', (done) =&gt; {
 	  //Mock login
 		const valid_input = {
-			"email": "jack123@gmail.com",
+			"email": "jack@gmail.com",
 			"password": "123"
 		}
 		//send login
@@ -542,19 +542,19 @@ describe('Articles', () =&gt; {
 //   describe('/GET/:id article', () =&gt; {
 	  it('it should GET an article by the given id', (done) =&gt; {
 		chai.request(index)
-		.get('/api/article/'+ '5fb4f25c4c5adf16a2de1380')
+		.get('/api/article/'+ articleId)
 		.then((res) =&gt; {
 			   res.should.have.status(200);
-<span class="cstat-no" title="statement not covered" >			  	res.</span>body.should.be.a('object');
-<span class="cstat-no" title="statement not covered" >			  	res.</span>body.should.have.property('message').eql('successfully fetched article');
-<span class="cstat-no" title="statement not covered" >			  	res.</span>body.should.have.property('article');
-<span class="cstat-no" title="statement not covered" >			  	res.</span>body.article.should.be.a('object');
-<span class="cstat-no" title="statement not covered" >			  	res.</span>body.article.should.have.property('_id')
-<span class="cstat-no" title="statement not covered" >				res.</span>body.article.should.have.property('title');
-<span class="cstat-no" title="statement not covered" >				res.</span>body.article.should.have.property('content');
-<span class="cstat-no" title="statement not covered" >				res.</span>body.article.should.have.property('image');
-<span class="cstat-no" title="statement not covered" >				articleId </span>= res.body.article._id;
-<span class="cstat-no" title="statement not covered" >		      done();</span>
+			  	res.body.should.be.a('object');
+			  	res.body.should.have.property('message').eql('successfully fetched article');
+			  	res.body.should.have.property('article');
+			  	res.body.article.should.be.a('object');
+			  	res.body.article.should.have.property('_id')
+				res.body.article.should.have.property('title');
+				res.body.article.should.have.property('content');
+				res.body.article.should.have.property('image');
+				articleId = res.body.article._id;
+		      done();
 		    });
 		  });
 		  
@@ -582,27 +582,27 @@ describe('Articles', () =&gt; {
 // //  describe('/PUT/:id article', () =&gt; {
 	it('it should UPDATE an article given the id', (done) =&gt; {
 			  chai.request(index)
-			  .patch('/api/article/' + '5fb4f25c4c5adf16a2de1380')
+			  .patch('/api/article/' + articleId)
 			  .set('auth', token)
 			  .send({title: "Java basics", content: "java", image: "image lorem" })
 			  .end((err, res) =&gt; {
 					res.should.have.status(200);
-<span class="cstat-no" title="statement not covered" >					res.</span>body.should.be.a('object');
-<span class="cstat-no" title="statement not covered" >					res.</span>body.should.have.property('message').eql('successfully updated article');
-<span class="cstat-no" title="statement not covered" >					res.</span>body.should.have.property('post');
-<span class="cstat-no" title="statement not covered" >			  	    res.</span>body.post.should.be.a('object');
-<span class="cstat-no" title="statement not covered" >			  	    res.</span>body.post.should.have.property('_id')
-<span class="cstat-no" title="statement not covered" >				    res.</span>body.post.should.have.property('title');
-<span class="cstat-no" title="statement not covered" >				    res.</span>body.post.should.have.property('content');
-<span class="cstat-no" title="statement not covered" >				    res.</span>body.post.should.have.property('image');
-<span class="cstat-no" title="statement not covered" >				    articleId </span>= res.body.article._id;
-<span class="cstat-no" title="statement not covered" >				 done();</span>
+					res.body.should.be.a('object');
+					res.body.should.have.property('message').eql('successfully updated article');
+					res.body.should.have.property('post');
+			  	    res.body.post.should.be.a('object');
+			  	    res.body.post.should.have.property('_id')
+				    res.body.post.should.have.property('title');
+				    res.body.post.should.have.property('content');
+				    res.body.post.should.have.property('image');
+				    articleId = res.body.post._id;
+				 done();
 			  });
 		});
 		it('it should not UPDATE an article given an invalid article id', (done) =&gt; {
 		
 			chai.request(index)
-			.patch('/api/article/' +'5fb37ccf3ffc016309cd255')
+			.patch('/api/article/' +'5fb590a86516822d8d97e305')
 			.set('auth', token)
 			.end((err, res) =&gt; {
 				  res.should.have.status(404);
@@ -655,7 +655,7 @@ describe('Articles', () =&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Dec 02 2020 10:19:25 GMT+0200 (Central Africa Time)
+                at Thu Dec 03 2020 09:09:40 GMT+0200 (Central Africa Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

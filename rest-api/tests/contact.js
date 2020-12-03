@@ -25,7 +25,7 @@ describe('contacts', () => {
     it('It return token when logged in with valid credentials', (done) => {
       //Mock login
       const valid_input = {
-        "email": "cyusa@gmail.com",
+        "email": "jack@gmail.com",
         "password": "123"
       }
       //send login
@@ -51,24 +51,26 @@ describe('contacts', () => {
         .send(contact)
         .then((err,res) => {
           res.should.have.status(201);
-          // res.body.should.be.a('object');
-				  // res.body.should.have.property('message').eql('successfully created contact');
-          // res.body.should.have.property('contact');
-          // res.body.contact.should.be.a('object');
-          // res.body.contact.should.have.property('_id')
-          // res.body.contact.should.have.property('name').eql('cyusa');
-				  // res.body.contact.should.have.property('email').eql('cyusa@gmail.com');
-				  // res.body.contact.should.have.property('phone').eql('0788994455');
-				  // res.body.contact.should.have.property('message').eql('lets see');
-          // contactId = res.body.contact._id;
+          res.body.should.be.a('object');
+				  res.body.should.have.property('message').eql('successfully created contact');
+          res.body.should.have.property('contact');
+          res.body.contact.should.be.a('object');
+          res.body.contact.should.have.property('_id')
+          res.body.contact.should.have.property('name').eql('cyusa');
+				  res.body.contact.should.have.property('email').eql('cyusa@gmail.com');
+				  res.body.contact.should.have.property('phone').eql('0788994455');
+				  res.body.contact.should.have.property('message').eql('lets see');
+          contactId = res.body.contact._id;
+         
         })
+        done();
         // .catch((error) => {
         //   console.log(error)
     // });
     });
     it('it should GET a contact by the given id', (done) => {
       chai.request(index)
-      .get('/api/contact/'+ "5fb38978d1d1b4705dbfd642")
+      .get('/api/contact/'+ contactId)
       .then((res) => {
         res.should.have.status(200);
         res.body.should.be.a('object');
@@ -79,30 +81,30 @@ describe('contacts', () => {
 				res.body.contact.should.have.property('title');
 				res.body.contact.should.have.property('content');
 				res.body.contact.should.have.property('image');
-				// contactId = res.body.contact._id;
-        done();
+				contactId = res.body.contact._id;
+        
     });
+    done();
   });
 
   it('it should DELETE a contact given the id', (done) => {
 		
     chai.request(index)
-    .delete('/api/contact/' + '5fb3892bbad4c27034bc43d4' )
+    .delete('/api/contact/' + '5fbbbd2f11cf6134aa81d960')
     .set('auth', token)
     .end((err, res) => {
       res.should.have.status(200);
       res.body.should.be.a('object');
       res.body.should.have.property('success').eql('contact successfully deleted');
-     
-    done();
-    });
+      contactId = res.body.contact._id;
+      });
+      done();
 });
 
 it('it should not DELETE a contact given an invalid contact id', (done) => {
 
 chai.request(index)
-.delete('/api/contact/' +'5fb37ccf3ffc016309cd255'
-)
+.delete('/api/contact/' + '5fb6c0de87cf9b49ada4bc2')
 .set('auth', token)
 .end((err, res) => {
     res.should.have.status(404);

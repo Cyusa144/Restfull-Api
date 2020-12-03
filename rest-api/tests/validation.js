@@ -22,7 +22,7 @@ describe('Validator', () => {
     it('should validate contact' , () => {
         const data = {
             name: 'Lorem ipsum title',
-            email: 'cyusa@gmail.com',
+            email: 'jack123@gmail.com',
             phone: '07323232422',
             message: 'Lorem ipsum title'
         };
@@ -31,9 +31,9 @@ describe('Validator', () => {
     });
     it('should validate user' , () => {
         const data = {
-            name: 'Cyusa Jacob',
-            username: 'cyusa',
-            email:'cyusa@gmail.com',
+            name: 'Cyusa Jack',
+            username: 'jack',
+            email:'jack123@gmail.com',
             password: '123'
         };
         const validate = validator('user', data);
