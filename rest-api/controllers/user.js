@@ -2,10 +2,7 @@
 import User from "../models/user";
 
 import { generateToken } from "../helpers/token";
-import {
-	validator,
-	validationErrors
-} from "../validation";
+
 
 
 const addNewUser = async (req, res) => {
@@ -16,12 +13,10 @@ const addNewUser = async (req, res) => {
 			password: req.body.password
 		})
 		await user.save()
-		res.status(201).send({user})
+		res.status(201).send({message: " user successfully created ",user})
 	}
 	catch (error) {
 		res.status(500).json({ error })
-		// console.log( error )
-		// res.send({ error })
 	}
 };
 
@@ -38,8 +33,7 @@ const loginUser = async (req, res) => {
 		const token = await generateToken(userinfo);
 		res.status(200).send({token})
 	} catch(error) {
-		res.status(404)
-		res.send({ error:error.message})
+		res.status(404).send({ error:error.message})
 	}
 };
 

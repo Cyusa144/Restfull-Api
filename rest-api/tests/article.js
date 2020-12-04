@@ -115,8 +115,8 @@ describe('Articles', () => {
 				  res.body.should.be.a('object');
 				  res.body.should.have.property('message').eql('invalid article id');
 				  articleId = res.body.article._id;
+				});
 				done();
-			});
 	});	  
 
 			

@@ -30,7 +30,6 @@ const validator = (identifier, data) => {
             name: Joi.string().trim().min(3).required(),
             username: Joi.string().trim().min(3).max(15).required(),
             password: Joi.string().trim().min(8).required()
-            
           };
           break;
         }
@@ -44,7 +43,6 @@ const validator = (identifier, data) => {
 const validationErrors = (res, error) => {
   const errorMessage = error.details.map(d => d.message);
   return res.status(400).send({
-      status: 400,
       error: errorMessage,
   });
 };

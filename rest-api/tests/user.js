@@ -60,11 +60,12 @@ describe("Articles API", () => {
       expect(res.body.user.password).to.not.be.eql(user_input.password);
 
       //done after all assertions pass
-      done();
+      
     }).catch(err => {
       console.log(err);
     });
-  })
+    done();
+  });
 
     it('should return 401 for invalid email input', () => {
       //mock invalid user input
@@ -179,10 +180,11 @@ describe("Articles API", () => {
           expect(res).to.have.status(400);
           // expect(res.body.message).to.be.equal("Invalid input");
           // expect(res.body.errors.length).to.be.equal(1);
-          done();
+          
         }).catch(err => {
           console.log(err.message);
-        })
+        });
+        done();
   }); 
 
   it('should return error 400 for empty password', (done) => {
@@ -201,10 +203,11 @@ describe("Articles API", () => {
           expect(res).to.have.status(400);
           // expect(res.body.message).to.be.equal("Invalid input");
           // expect(res.body.errors.length).to.be.equal(1);
-          done();
+          
         }).catch(err => {
           console.log(err.message);
-        })
+        });
+        done();
   }); 
 
   it('should return error 401 for invalid email', (done) => {

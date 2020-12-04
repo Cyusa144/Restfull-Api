@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.67% </span>
+                <span class="strong">63.16% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>14/21</span>
+                <span class='fraction'>12/19</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">64.71% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/17</span>
+                <span class='fraction'>9/15</span>
             </div>
         
             
@@ -113,22 +113,7 @@
 <a name='L54'></a><a href='#L54'>54</a>
 <a name='L55'></a><a href='#L55'>55</a>
 <a name='L56'></a><a href='#L56'>56</a>
-<a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a>
-<a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L57'></a><a href='#L57'>57</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -142,12 +127,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -157,8 +137,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -191,12 +169,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { json } from "body-parser";
-import contactModel from "../models/contact";
-import {
-	validator,
-	validationErrors
-} from "../validation";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import contactModel from "../models/contact";
+&nbsp;
 &nbsp;
 &nbsp;
 const getAllContact = <span class="branch-2 cbranch-no" title="branch not covered" >async (req, res) =&gt; {</span>
@@ -205,17 +179,12 @@ const getAllContact = <span class="branch-2 cbranch-no" title="branch not covere
         res.status(200).send({contact})
     } catch (error) {
 <span class="cstat-no" title="statement not covered" >		res.</span>status(500).json({ error })
-	// }
-	// 	res.send({ error })
+	
 	}
 };
 &nbsp;
 const addNewContact = <span class="branch-4 cbranch-no" title="branch not covered" ><span class="branch-3 cbranch-no" title="branch not covered" ><span class="branch-2 cbranch-no" title="branch not covered" ><span class="branch-1 cbranch-no" title="branch not covered" >async (r</span></span></span>eq, res) =&gt; {</span>
     try {
-        // const { error } = validator('contact', req.body);
-        // if (error) {
-        //     return validationErrors(res, error);
-        // }
         const contact = new contactModel({
             name: req.body.name,
             email: req.body.email,
@@ -223,30 +192,28 @@ const addNewContact = <span class="branch-4 cbranch-no" title="branch not covere
             message: req.body.message
         })
         await contact.save()
-<span class="cstat-no" title="statement not covered" >        res.</span>status(201).send({
-            message: "successfully created contact", 
-            data: contact 
-        })
-    } catch (error) {
+<span class="cstat-no" title="statement not covered" >        res.</span>status(201).send({message: "successfully created contact",contact })
+    } 
+    catch (error) {
 <span class="cstat-no" title="statement not covered" >		res.</span>status(500).json({ error })
 	}
 };
-const <span class="fstat-no" title="function not covered" >getSingleContact </span>= <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >async(r</span></span>eq, res) =&gt; {
+const <span class="fstat-no" title="function not covered" >getSingleContact </span>= <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >async (r</span></span>eq, res) =&gt; {
 	try {
         const <span class="cstat-no" title="statement not covered" >contact = await contactModel.findOne({ _id: req.params.id })</span>
         if(!contact) return res.status(404).json({status: 404,message: 'invalid contact id'})
-		return res.status(200).send({message: "successfully fetched contact", contact})
+        return res.status(200).send({message: "successfully fetched article", article})
 	} catch(error) {
 <span class="cstat-no" title="statement not covered" >        console.</span>log(error.message)
-		// res.status(404)
-		// res.send({ error: "invalid contact id" })
+        
+&nbsp;
 	}
 };
 &nbsp;
 const deleteContact = <span class="branch-1 cbranch-no" title="branch not covered" >async (r</span>eq, res) =&gt; {
 	try {
 		await contactModel.deleteOne({ _id: req.params.id })
-<span class="cstat-no" title="statement not covered" >		res.</span>send({ success: "contact successfully deleted" }).status(204)
+<span class="cstat-no" title="statement not covered" >		res.</span>status(204).send({ success: "contact successfully deleted" })
 	} catch(error) {
 		res.status(404).json({ error: "invalid contact id" })
 	} 
@@ -265,7 +232,7 @@ export {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Dec 03 2020 09:09:40 GMT+0200 (Central Africa Time)
+                at Fri Dec 04 2020 11:13:28 GMT+0200 (Central Africa Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>
