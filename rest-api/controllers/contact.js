@@ -31,7 +31,7 @@ const getSingleContact = async (req, res) => {
 	try {
         const contact = await contactModel.findOne({ _id: req.params.id })
         if(!contact) return res.status(404).json({status: 404,message: 'invalid contact id'})
-        return res.status(200).send({message: "successfully fetched article", article})
+        return res.status(200).send({message: "successfully fetched contact", contact})
 	} catch(error) {
         console.log(error.message)
         
