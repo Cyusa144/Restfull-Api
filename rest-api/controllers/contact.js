@@ -33,7 +33,7 @@ const getSingleContact = async (req, res) => {
         if(!contact) return res.status(404).json({status: 404,message: 'invalid contact id'})
         return res.status(200).send({message: "successfully fetched contact", contact})
 	} catch(error) {
-        console.log(error.message)
+        res.status(500).json({ error })
         
 
 	}

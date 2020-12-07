@@ -37,6 +37,7 @@ const loginUser = async (req, res) => {
 	}
 };
 
+
 export {
     addNewUser,
     loginUser

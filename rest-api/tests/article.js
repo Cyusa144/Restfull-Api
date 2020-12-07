@@ -16,29 +16,14 @@ let articleId = "";
 
 //Our parent block
 describe('Articles', () => {
-	// beforeEach((done) => {
-    // Article.remove({});
-    // done();
-	// });
-  /*
-  * Test the /GET route
-  */
-
-	  it('it should GET all the articles', (done) => {
+	it('it should GET all the articles', (done) => {
 			chai.request(index)
 			.get('/api/article')
 		    .then((res) => {
 			  	res.should.have.status(200);
 			  done();
-			
-		    });
+		 });
 	  }); 
-
-  /*
-  	* Test the /POST route
-  */
-
-
   it('It return token when logged in with valid credentials', (done) => {
 	  //Mock login
 		const valid_input = {
@@ -51,11 +36,10 @@ describe('Articles', () => {
 		.send(valid_input)
 		   .then((login_response) => {
 			   login_response.should.have.status(200);
-			//    login_response.should.be.a("obj")
+
 			token = login_response.body.token;
 			
 			done();
-			
 		});
   });
 

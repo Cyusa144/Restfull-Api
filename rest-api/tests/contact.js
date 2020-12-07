@@ -16,12 +16,8 @@ describe('contacts', () => {
         .then((res) => {
           res.should.have.status(200);
           done();
-          // res.body.user.should.be.a('array');
         });
-        // .catch((error) => {
-        //   console.log(error)
       });
-    // });
     it('It return token when logged in with valid credentials', (done) => {
       //Mock login
       const valid_input = {
@@ -33,7 +29,8 @@ describe('contacts', () => {
       .post('/api/user/login')
       .send(valid_input)
          .then((login_response) => {
-        //add token
+			   login_response.should.have.status(200);
+
         token = login_response.body.token;
         done();
       });
@@ -68,6 +65,27 @@ describe('contacts', () => {
         //   console.log(error)
     // });
     });
+    it('should not add new contact' , (done) => {
+      const contact ={
+          
+          email: 'cyusa@gmail.com',
+          phone: '0788994455',
+          message: 'lets see'
+      }
+      chai.request(index)
+      .post('/api/contact')
+      .set('auth', token)
+      .send(contact)
+      .then((err,res) => {
+        res.should.have.status(500);
+        res.body.should.be.a('object');
+       
+      })
+      done();
+      // .catch((error) => {
+      //   console.log(error)
+  // });
+  });
     it('it should GET a contact by the given id', (done) => {
       chai.request(index)
       .get('/api/contact/'+ contactId)
@@ -86,6 +104,28 @@ describe('contacts', () => {
     });
     done();
   });
+  it('it should not GET a contact by the given invalid id', (done) => {
+    chai.request(index)
+    .get('/api/contact/'+ '5fb37d81ba8179637f1cc067')
+    .then((res) => {
+      res.should.have.status(404);
+      res.body.should.be.a('object');
+      res.body.should.have.property('message').eql('invalid contact id');
+     
+  });
+  done();
+});
+it('it should not GET a contact by the given bad id', (done) => {
+  chai.request(index)
+  .get('/api/contact/'+ '5fb37dba8179637f1cc067')
+  .then((res) => {
+    res.should.have.status(500);
+    res.body.should.be.a('object');
+   
+   
+});
+done();
+});
 
   it('it should DELETE a contact given the id', (done) => {
 		
