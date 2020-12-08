@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.74% </span>
+                <span class="strong">78.95% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>18/19</span>
+                <span class='fraction'>15/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">86.96% </span>
+                <span class="strong">69.57% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>20/23</span>
+                <span class='fraction'>16/23</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">93.33% </span>
+                <span class="strong">73.33% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>14/15</span>
+                <span class='fraction'>11/15</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -127,7 +127,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -136,28 +136,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">23x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -183,7 +183,7 @@ const getAllContact = <span class="branch-2 cbranch-no" title="branch not covere
 	}
 };
 &nbsp;
-const addNewContact = async (req, res) =&gt; {
+const addNewContact = <span class="branch-1 cbranch-no" title="branch not covered" >async (r</span>eq, res) =&gt; {
     try {
         const contact = new contactModel({
             name: req.body.name,
@@ -192,15 +192,15 @@ const addNewContact = async (req, res) =&gt; {
             message: req.body.message
         })
         await contact.save()
-        res.status(201).send({message: "successfully created contact",contact })
+<span class="cstat-no" title="statement not covered" >        res.</span>status(201).send({message: "successfully created contact",contact })
     } 
     catch (error) {
 		res.status(500).json({ error })
 	}
 };
-const getSingleContact = <span class="missing-if-branch" title="if path not taken" >I</span><span class="branch-2 cbranch-no" title="branch not covered" >async (r</span>eq, res) =&gt; {
+const getSingleContact = <span class="branch-2 cbranch-no" title="branch not covered" ><span class="branch-1 cbranch-no" title="branch not covered" >async (r</span></span>eq, res) =&gt; {
 	try {
-        const contact = await contactModel.findOne({ _id: req.params.id })
+        const <span class="cstat-no" title="statement not covered" >contact = await contactModel.findOne({ _id: req.params.id })</span>
         if(!contact) return res.status(404).json({status: 404,message: 'invalid contact id'})
         return res.status(200).send({message: "successfully fetched contact", contact})
 	} catch(error) {
@@ -210,10 +210,10 @@ const getSingleContact = <span class="missing-if-branch" title="if path not take
 	}
 };
 &nbsp;
-const deleteContact = async (req, res) =&gt; {
+const deleteContact = <span class="branch-1 cbranch-no" title="branch not covered" >async (r</span>eq, res) =&gt; {
 	try {
 		await contactModel.deleteOne({ _id: req.params.id })
-		res.status(204).send({ success: "contact successfully deleted" })
+<span class="cstat-no" title="statement not covered" >		res.</span>status(204).send({ success: "contact successfully deleted" })
 	} catch(error) {
 		res.status(404).json({ error: "invalid contact id" })
 	} 
@@ -232,7 +232,7 @@ export {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Dec 07 2020 14:36:36 GMT+0200 (Central Africa Time)
+                at Tue Dec 08 2020 10:43:59 GMT+0200 (Central Africa Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

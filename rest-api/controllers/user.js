@@ -4,7 +4,15 @@ import User from "../models/user";
 import { generateToken } from "../helpers/token";
 
 
-
+const getAllUser = async (req, res) => {
+    try {
+        const user = await userModel.find()
+        res.status(200).send({user})
+    } catch (error) {
+		res.status(500).json({ error })
+	
+	}
+};
 const addNewUser = async (req, res) => {
 	try {
 		const user = new User({
@@ -39,6 +47,7 @@ const loginUser = async (req, res) => {
 
 
 export {
+	getAllUser,
     addNewUser,
     loginUser
 }
